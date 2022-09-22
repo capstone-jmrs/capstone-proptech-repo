@@ -133,3 +133,4 @@ dmypy.json
 data/
 
 __MACOSX/
+.DS_Store
