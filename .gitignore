@@ -135,6 +135,8 @@ dmypy.json
 
 # data
 data/
+/data/
+data
 
 __MACOSX/
 .DS_Store
