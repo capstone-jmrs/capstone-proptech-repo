@@ -59,7 +59,6 @@ def get_dataframe(sql_query):
     return pd.read_sql_query(sql=sql_query, con=engine)
 
 
-
 # Insert the get_engine() function definition below - when instructed
 def get_engine():
     sql_config = get_sql_config()
@@ -68,20 +67,6 @@ def get_engine():
                         )
     return engine
 
-def get_dataframe2(sql_query):
-    ''' 
-    Connect to the PostgreSQL database server, 
-    run query and return data as a pandas dataframe
-    '''
 
-    # get the connection configuration using the get_sql_config function
-    sql_config = get_sql_config()
-    # create a connection engine to the PostgreSQL server
-    engine = sqlalchemy.create_engine('postgresql://user:pass@host/database',
-                    connect_args=sql_config # dictionary with config details
-                    )
-    
-    # open a conn session using with, run the query, and return the results
-    #return pd.read_sql_query(sql=sql_query, con=engine)
 
 
