@@ -11,7 +11,14 @@ FROM spotahome_df_details_complete sddc;
 
 --------------------------------------------------
 SELECT *
-FROM spotahome_final sf;
+FROM spotahome_final_3
+WHERE platform_id = '601114';
+
+
+--------------------------------------------------
+SELECT *
+FROM spotahome_final_2 sf
+ORDER BY available_from;
 
 
 --------------------------------------------------
@@ -29,6 +36,9 @@ SELECT *
 FROM rightmove_details_julia rdj;
 
 
+--------------------------------------------------
+SELECT *
+FROM spotahome_df_complete_available_from sdcaf;
 --------------------------------------------------
 --------------------------------------------------
 SELECT *
@@ -87,7 +97,8 @@ ALTER TABLE spotahome_final
     ALTER COLUMN m2 TYPE INT USING m2::INT,
     ALTER COLUMN bedrooms TYPE INT USING bedrooms::INT;
   
-   
+
+--------------------------------------------------
 --------------------------------------------------
 CREATE TABLE spotahome_final_2 AS
 SELECT *
@@ -119,20 +130,67 @@ ALTER TABLE spotahome_final_2
 
 
 --------------------------------------------------
+SELECT DISTINCT(DATE_PART('year', available_from))
+FROM spotahome_final_2;
+
+
+--------------------------------------------------
 UPDATE spotahome_final_2
-SET available_from = '2022',
-WHERE available_from = '0001';
+SET available_from = available_from + 
+    MAKE_INTERVAL(YEARS := 2022 - EXTRACT(YEAR FROM available_from)::INTEGER);
 
 
 --------------------------------------------------
-
-
 --------------------------------------------------
+CREATE TABLE spotahome_final_3 AS
+SELECT *
+FROM spotahome_df_complete_available_from sdcaf 
+LEFT JOIN spotahome_df_details_complete sddc  
+	   ON sdcaf.platform_id = sddc.id;
 
 
---------------------------------------------------
    
+--------------------------------------------------
+SELECT *
+FROM spotahome_final_3;
+
+--------------------------------------------------
+SELECT 
+COALESCE(available_from_2, '2022')
+FROM spotahome_final_3 sf;
+
+
+--------------------------------------------------
+UPDATE spotahome_final_3
+SET
+available_from_2 = COALESCE(available_from_2, '2022');
+
+
+--------------------------------------------------
+--------------------------------------------------
+/*ALTER TABLE spotahome_final_3  
+	ALTER COLUMN available_from_0 TYPE VARCHAR USING available_from::VARCHAR,
+	ALTER COLUMN available_from_1 TYPE VARCHAR USING available_from::VARCHAR,
+	ALTER COLUMN available_from_2 TYPE VARCHAR USING available_from::VARCHAR;*/
+
+
+--------------------------------------------------
+SELECT available_from_0,
+		available_from_1,
+		available_from_2,
+		
+		
+--------------------------------------------------		
+ALTER TABLE spotahome_final_3  
+	ALTER COLUMN available_from_0 TYPE DATE USING to_timestamp(available_from, 'DD'),
+	ALTER COLUMN available_from_1 TYPE DATE USING to_timestamp(available_from, 'Month'),
+	ALTER COLUMN available_from_2 TYPE DATE USING to_timestamp(available_from, 'YYYY');
+
+
+SELECT available_from_0 || available_from_1 || available_from_2 AS available_from_total
+FROM spotahome_final_3 sf;
+
 --------------------------------------------------
 /*Drop old tables*/
 
-DROP TABLE spotahome_df_details;
+DROP TABLE spotahome_final_3;
