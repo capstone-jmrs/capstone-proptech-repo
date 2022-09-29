@@ -11,7 +11,7 @@
  */
 
 ALTER TABLE capstone_jmrs.blueground_df_complete
-  ALTER COLUMN blueground_id  			TYPE integer USING blueground_id::integer,
+  ALTER COLUMN platform_id  			TYPE integer USING platform_id::integer,
   ALTER COLUMN platform 				TYPE varchar,
   ALTER COLUMN neighbourhood 			TYPE varchar,
   ALTER COLUMN property_type 			TYPE varchar,
@@ -117,8 +117,30 @@ WHERE (neighbourhood = 'Stockwell') OR (neighbourhood = 'Vauxhall')OR (neighbour
 
  --- Update to Tower of Hamlets
  UPDATE capstone_jmrs.blueground_df_complete
-SET  neighbourhood = 'Lambeth'
-WHERE (neighbourhood = 'Bromley-by-Bow') OR (neighbourhood = 'Limehouse')OR (neighbourhood = 'Wapping') OR (neighbourhood = 'Whitechapel')OR (neighbourhood = ' Whitechapel/Brick Lane'); 
+SET  neighbourhood = 'Tower of Hamlets'
+WHERE (neighbourhood = 'Bromley by Bow') OR (neighbourhood = 'Bromley-by-Bow') OR (neighbourhood = 'Limehouse')OR (neighbourhood = 'Wapping') OR (neighbourhood = 'Whitechapel')OR (neighbourhood = 'Whitechapel/Brick Lane'); 
 
 
+ /* Part 5 -  We now have to update the Types of the Detail
+ * currently, we have "String" in this cells
+ * https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-update/
+ * 
+ */
+ ALTER TABLE capstone_jmrs.blueground_df_details
+ ALTER COLUMN  blueground_id_details 	TYPE integer USING blueground_id_details::integer,
+ ALTER COLUMN  lotsize			TYPE varchar,
+ ALTER COLUMN  value			TYPE float USING (trim(value)::float),
+ ALTER COLUMN  caption			TYPE varchar;
+
+ /* Part 6 -  We now create a new table from the Main and Detail-Tables
+ * https://stackoverflow.com/questions/14065408/how-do-i-merge-two-tables-in-postgresql
+ * 
+ */
+
+
+CREATE TABLE blueground_final AS
+SELECT *
+FROM capstone_jmrs.blueground_df_complete
+LEFT JOIN  capstone_jmrs.blueground_df_details
+	   ON blueground_df_complete.platform_id  = blueground_df_details.blueground_id_details ;
  
