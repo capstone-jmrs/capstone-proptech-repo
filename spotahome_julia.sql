@@ -229,6 +229,23 @@ ALTER TABLE spotahome_final_3
   DROP COLUMN id;
 
 --------------------------------------------------
+UPDATE spotahome_final_3
+SET m2 = NULL
+WHERE m2 = '1'
+	OR m2 = '3'
+	OR m2 = '8';
+
+
+--------------------------------------------------
+--------------------------------------------------
+SELECT *
+FROM spotahome_clean sc
+WHERE neighborhood = 'City of Westminster'
+ORDER BY price_per_sqm ;
+
+--------------------------------------------------
+--------------------------------------------------
 /*Drop old tables*/
 
 DROP TABLE spotahome_final_3;
+DROP TABLE spotahome_clean;
