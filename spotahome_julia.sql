@@ -172,7 +172,6 @@ available_from_2 = COALESCE(available_from_2, '2022');
 
 
 --------------------------------------------------
---------------------------------------------------
 /*ALTER TABLE spotahome_final_3  
 	ALTER COLUMN available_from_0 TYPE VARCHAR USING available_from::VARCHAR,
 	ALTER COLUMN available_from_1 TYPE VARCHAR USING available_from::VARCHAR,
@@ -206,13 +205,13 @@ UPDATE spotahome_final_3
 --------------------------------------------------
 ALTER TABLE spotahome_final_3
     ALTER COLUMN platform_id TYPE INT USING platform_id::INT,
-    ALTER COLUMN platform TYPE VARCHAR USING platform::VARCHAR,
-    ALTER COLUMN neighborhood TYPE VARCHAR USING neighborhood::VARCHAR,
-    ALTER COLUMN property_type TYPE VARCHAR USING property_type::VARCHAR,
-    ALTER COLUMN housing_type TYPE VARCHAR USING housing_type::VARCHAR,
+    ALTER COLUMN platform TYPE VARCHAR,-- USING platform::VARCHAR,
+    ALTER COLUMN neighborhood TYPE VARCHAR,-- USING neighborhood::VARCHAR,
+    ALTER COLUMN property_type TYPE VARCHAR,-- USING property_type::VARCHAR,
+    ALTER COLUMN housing_type TYPE VARCHAR,-- USING housing_type::VARCHAR,
     ALTER COLUMN price_pcm TYPE INT USING price_pcm::INT,
-    ALTER COLUMN title TYPE VARCHAR USING title::VARCHAR,
-    ALTER COLUMN furnished TYPE VARCHAR USING furnished::VARCHAR,
+    ALTER COLUMN title TYPE VARCHAR,-- USING title::VARCHAR,
+    ALTER COLUMN furnished TYPE VARCHAR,-- USING furnished::VARCHAR,
     ALTER COLUMN available_from_total TYPE DATE USING available_from_total::DATE,
     ALTER COLUMN id TYPE INT USING id::INT,
     ALTER COLUMN bathrooms TYPE INT USING bathrooms::INT,
@@ -227,25 +226,41 @@ ALTER TABLE spotahome_final_3
   DROP COLUMN available_from_1,
   DROP COLUMN available_from_2,
   DROP COLUMN id;
+  --DROP COLUMN property_type;
 
 --------------------------------------------------
 UPDATE spotahome_final_3
 SET m2 = NULL
 WHERE m2 = '1'
 	OR m2 = '3'
-	OR m2 = '8';
+	OR m2 = '8'
+	OR m2 = '1000';
+
+
+--------------------------------------------------
+ALTER TABLE spotahome_final_3
+	RENAME COLUMN available_from_total TO available_from;
+	
+ALTER TABLE spotahome_final_3
+	RENAME COLUMN furnished TO furniture;
+
+ALTER TABLE spotahome_final_3
+	RENAME COLUMN m2 TO size_sqm;
+
+ALTER TABLE spotahome_final_3
+	RENAME COLUMN housing_type TO property_type;
 
 
 --------------------------------------------------
 --------------------------------------------------
 SELECT *
-FROM spotahome_clean sc
-WHERE neighborhood = 'City of Westminster'
-ORDER BY price_per_sqm ;
+FROM spotahome_eda se 
+--WHERE neighborhood = 'City of Westminster'
+ORDER BY size_sqm;
 
 --------------------------------------------------
 --------------------------------------------------
 /*Drop old tables*/
 
 DROP TABLE spotahome_final_3;
-DROP TABLE spotahome_clean;
+DROP TABLE spotahome_eda;
