@@ -39,6 +39,8 @@ FROM rightmove_details_julia rdj;
 --------------------------------------------------
 SELECT *
 FROM spotahome_df_complete_available_from sdcaf;
+
+
 --------------------------------------------------
 --------------------------------------------------
 SELECT *
@@ -108,7 +110,7 @@ LEFT JOIN spotahome_df_details_complete sddc
 	   
 
 --------------------------------------------------
-ALTER TABLE spotahome_final_2
+ALTER TABLE spotahome_final_3
     ALTER COLUMN platform_id TYPE INT USING platform_id::INT,
     ALTER COLUMN platform TYPE VARCHAR USING platform::VARCHAR,
     ALTER COLUMN neighborhood TYPE VARCHAR USING neighborhood::VARCHAR,
@@ -117,7 +119,7 @@ ALTER TABLE spotahome_final_2
     ALTER COLUMN price_pcm TYPE INT USING price_pcm::INT,
     ALTER COLUMN title TYPE VARCHAR USING title::VARCHAR,
     ALTER COLUMN furnished TYPE VARCHAR USING furnished::VARCHAR,
-    ALTER COLUMN available_from TYPE VARCHAR USING available_from::VARCHAR,
+    ALTER COLUMN available_from_total TYPE DATE USING available_from::DATE,
     ALTER COLUMN id TYPE INT USING id::INT,
     ALTER COLUMN bathrooms TYPE INT USING bathrooms::INT,
     ALTER COLUMN m2 TYPE INT USING m2::INT,
@@ -138,9 +140,17 @@ FROM spotahome_final_2;
 UPDATE spotahome_final_2
 SET available_from = available_from + 
     MAKE_INTERVAL(YEARS := 2022 - EXTRACT(YEAR FROM available_from)::INTEGER);
-
+   
 
 --------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------   
+--------------------------------------------------
+SELECT *
+FROM spotahome_final_3;
+
+
 --------------------------------------------------
 CREATE TABLE spotahome_final_3 AS
 SELECT *
@@ -149,15 +159,10 @@ LEFT JOIN spotahome_df_details_complete sddc
 	   ON sdcaf.platform_id = sddc.id;
 
 
-   
 --------------------------------------------------
-SELECT *
-FROM spotahome_final_3;
-
---------------------------------------------------
-SELECT 
+/*SELECT 
 COALESCE(available_from_2, '2022')
-FROM spotahome_final_3 sf;
+FROM spotahome_final_3 sf;*/
 
 
 --------------------------------------------------
@@ -175,20 +180,53 @@ available_from_2 = COALESCE(available_from_2, '2022');
 
 
 --------------------------------------------------
-SELECT available_from_0,
+/*SELECT available_from_0,
 		available_from_1,
-		available_from_2,
+		available_from_2,*/
 		
 		
 --------------------------------------------------		
-ALTER TABLE spotahome_final_3  
+/*ALTER TABLE spotahome_final_3  
 	ALTER COLUMN available_from_0 TYPE DATE USING to_timestamp(available_from, 'DD'),
 	ALTER COLUMN available_from_1 TYPE DATE USING to_timestamp(available_from, 'Month'),
-	ALTER COLUMN available_from_2 TYPE DATE USING to_timestamp(available_from, 'YYYY');
+	ALTER COLUMN available_from_2 TYPE DATE USING to_timestamp(available_from, 'YYYY');*/
 
 
-SELECT available_from_0 || available_from_1 || available_from_2 AS available_from_total
-FROM spotahome_final_3 sf;
+--------------------------------------------------	
+ALTER TABLE spotahome_final_3
+  ADD available_from_total VARCHAR;
+
+
+ 
+--------------------------------------------------	
+UPDATE spotahome_final_3 
+	SET available_from_total = available_from_0 || '-' || available_from_1 || '-' || available_from_2;
+
+
+--------------------------------------------------
+ALTER TABLE spotahome_final_3
+    ALTER COLUMN platform_id TYPE INT USING platform_id::INT,
+    ALTER COLUMN platform TYPE VARCHAR USING platform::VARCHAR,
+    ALTER COLUMN neighborhood TYPE VARCHAR USING neighborhood::VARCHAR,
+    ALTER COLUMN property_type TYPE VARCHAR USING property_type::VARCHAR,
+    ALTER COLUMN housing_type TYPE VARCHAR USING housing_type::VARCHAR,
+    ALTER COLUMN price_pcm TYPE INT USING price_pcm::INT,
+    ALTER COLUMN title TYPE VARCHAR USING title::VARCHAR,
+    ALTER COLUMN furnished TYPE VARCHAR USING furnished::VARCHAR,
+    ALTER COLUMN available_from_total TYPE DATE USING available_from_total::DATE,
+    ALTER COLUMN id TYPE INT USING id::INT,
+    ALTER COLUMN bathrooms TYPE INT USING bathrooms::INT,
+    ALTER COLUMN m2 TYPE INT USING m2::INT,
+    ALTER COLUMN bedrooms TYPE INT USING bedrooms::INT;
+   
+   
+--------------------------------------------------
+ALTER TABLE spotahome_final_3
+  DROP COLUMN available_from,
+  DROP COLUMN available_from_0,
+  DROP COLUMN available_from_1,
+  DROP COLUMN available_from_2,
+  DROP COLUMN id;
 
 --------------------------------------------------
 /*Drop old tables*/
