@@ -140,3 +140,5 @@ data
 
 __MACOSX/
 .DS_Store
+
+.csv

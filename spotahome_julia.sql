@@ -148,8 +148,10 @@ SET available_from = available_from +
 --------------------------------------------------   
 --------------------------------------------------
 SELECT *
-FROM spotahome_final_3;
-
+FROM spotahome_final_3
+--WHERE bedrooms ='4';
+ORDER BY bedrooms;
+--WHERE property_type = 'studios';
 
 --------------------------------------------------
 CREATE TABLE spotahome_final_3 AS
@@ -195,7 +197,8 @@ available_from_2 = COALESCE(available_from_2, '2022');
 ALTER TABLE spotahome_final_3
   ADD available_from_total VARCHAR;
 
-
+ALTER TABLE spotahome_final_3
+  ADD let_type VARCHAR;
  
 --------------------------------------------------	
 UPDATE spotahome_final_3 
@@ -252,11 +255,32 @@ ALTER TABLE spotahome_final_3
 
 
 --------------------------------------------------
+UPDATE spotahome_final_3
+SET bedrooms = COALESCE(bedrooms, '0')
+WHERE property_type = 'studios';
+
+UPDATE spotahome_final_3
+SET bedrooms = COALESCE(bedrooms, '1')
+WHERE property_type = 'apartments/bedrooms:1';
+
+UPDATE spotahome_final_3
+SET bedrooms = COALESCE(bedrooms, '2')
+WHERE property_type = 'apartments/bedrooms:2';
+
+UPDATE spotahome_final_3
+SET bedrooms = COALESCE(bedrooms, '3')
+WHERE property_type = 'apartments/bedrooms:3';
+
+
+--------------------------------------------------
 --------------------------------------------------
 SELECT *
 FROM spotahome_eda se 
 --WHERE neighborhood = 'City of Westminster'
 ORDER BY size_sqm;
+
+
+
 
 --------------------------------------------------
 --------------------------------------------------
@@ -264,3 +288,8 @@ ORDER BY size_sqm;
 
 DROP TABLE spotahome_final_3;
 DROP TABLE spotahome_eda;
+DROP TABLE capstone_jmrs.rightmove_details_julia;
+DROP TABLE capstone_jmrs.rightmove_details_julia_2;
+DROP TABLE capstone_jmrs.spotahome_df_complete;
+DROP TABLE capstone_jmrs.spotahome_df_complete_2;
+DROP TABLE capstone_jmrs.spotahome_clean;
