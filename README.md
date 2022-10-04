@@ -9,6 +9,4 @@ Repository for neuefische - Capstone - Project
 
 3. spotahome_julia_eda.ipynb<br> perform Eda; calculate new columns; simple plots
 
-4. spotahome_julia_eda.sql<br> last clean of eda-table
-
-5. spotahome_julia.twb<br> visualisation in tableau
+4. spotahome_julia.twb<br> visualisation in tableau
