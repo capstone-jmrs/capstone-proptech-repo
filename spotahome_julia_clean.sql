@@ -92,9 +92,12 @@ ALTER TABLE spotahome_merged
 
 
 --------------------------------------------------
-SELECT *
-FROM spotahome_merged
-WHERE bedrooms IS NULL;
+ UPDATE spotahome_merged
+	SET available_today = CASE 
+      						WHEN available_from = '2022-10-04'  THEN 'Available'
+      						ELSE 'Occupied'
+						  END;
 
+ 
 --------------------------------------------------
 --DROP TABLE spotahome_merged;
