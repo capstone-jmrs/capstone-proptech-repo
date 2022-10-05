@@ -121,4 +121,7 @@ SET  neighbourhood = 'Lambeth'
 WHERE (neighbourhood = 'Bromley by Bow')  OR (neighbourhood = 'Limehouse')OR (neighbourhood = 'Wapping') OR (neighbourhood = 'Whitechapel')OR (neighbourhood = ' Whitechapel/Brick Lane'); 
 
 
- 
+-----
+SELECT *
+FROM capstone_jmrs.blueground_df_main
+WHERE available_from = '2022-11-11' ;
