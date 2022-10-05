@@ -293,3 +293,43 @@ DROP TABLE capstone_jmrs.rightmove_details_julia_2;
 DROP TABLE capstone_jmrs.spotahome_df_complete;
 DROP TABLE capstone_jmrs.spotahome_df_complete_2;
 DROP TABLE capstone_jmrs.spotahome_clean;
+DROP TABLE capstone_jmrs.platforms_complete;
+
+
+
+
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+
+
+SELECT row_number() over () as id,
+		*
+FROM spotahome_eda se 
+FULL JOIN blueground_clean bc 
+ON se.platform_id = bc.platform_id;
+						 
+
+
+
+
+CREATE TABLE platforms_complete AS
+(SELECT *
+ FROM spotahome_clean
+ UNION
+ SELECT *
+ FROM blueground_clean
+ UNION
+ SELECT *
+ FROM rightmove_clean);
+ 
+
+
+select 
+    row_number() over () as id, 
+   t.type from t;
+
+
+UPDATE capstone_jmrs.platforms_complete
+SET  platform = 'Spotahome'
+WHERE ( platform = 'spotahome');

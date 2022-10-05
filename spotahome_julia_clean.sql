@@ -19,7 +19,7 @@ ALTER TABLE spotahome_merged
 
 --------------------------------------------------
 ALTER TABLE spotahome_merged
-    ALTER COLUMN platform_id TYPE INT USING platform_id::INT,
+    ALTER COLUMN platform_id TYPE VARCHAR,
     ALTER COLUMN platform TYPE VARCHAR,
     ALTER COLUMN neighborhood TYPE VARCHAR,
     ALTER COLUMN housing_type TYPE VARCHAR,
@@ -29,11 +29,11 @@ ALTER TABLE spotahome_merged
     ALTER COLUMN let_type TYPE VARCHAR,
     --available_today
     ALTER COLUMN scraping_date TYPE DATE USING scraping_date::DATE,
-    ALTER COLUMN price_pcm_0 TYPE INT USING price_pcm_0::INT,
-    ALTER COLUMN price_pcm_1 TYPE INT USING price_pcm_1::INT,
-    ALTER COLUMN bathrooms TYPE INT USING bathrooms::INT,
-    ALTER COLUMN m2 TYPE INT USING m2::INT,
-    ALTER COLUMN bedrooms TYPE INT USING bedrooms::INT,
+    ALTER COLUMN price_pcm_0 TYPE FLOAT USING price_pcm_0::FLOAT,
+    ALTER COLUMN price_pcm_1 TYPE FLOAT USING price_pcm_1::FLOAT,
+    ALTER COLUMN bathrooms TYPE FLOAT USING bathrooms::FLOAT,
+    ALTER COLUMN m2 TYPE FLOAT USING m2::FLOAT,
+    ALTER COLUMN bedrooms TYPE FLOAT USING bedrooms::FLOAT,
     ALTER COLUMN available_from_total TYPE DATE USING available_from_total::DATE;
    
    
@@ -65,6 +65,8 @@ ALTER TABLE spotahome_merged
 ALTER TABLE spotahome_merged
 	RENAME COLUMN m2 TO size_sqm;
 
+ALTER TABLE spotahome_merged
+	RENAME COLUMN neighborhood TO neighbourhood;
 
 --------------------------------------------------
 UPDATE spotahome_merged
@@ -88,18 +90,62 @@ SET bedrooms = COALESCE(bedrooms, '4')
 WHERE housing_type = 'apartments/bedrooms:3more';
 
 ALTER TABLE spotahome_merged
-	DROP COLUMN housing_type;
+	DROP COLUMN housing_type,
+	DROP COLUMN title;
 
 
 --------------------------------------------------
  UPDATE spotahome_merged
 	SET available_today = CASE 
-      						WHEN available_from = CURRENT_DATE  THEN 'Available'
-      						ELSE 'Occupied'
+      						WHEN available_from = CURRENT_DATE  THEN 'available'
+      						ELSE 'occupied'
 						  END;
+						 
+						 
+--------------------------------------------------						 
+UPDATE spotahome_merged
+SET let_type = NULL 
+WHERE let_type = '';
+			
+						 
+--------------------------------------------------						 
+CREATE TABLE IF NOT EXISTS capstone_jmrs.spotahome_clean AS
+SELECT 
+	platform_id, 
+	platform,
+	neighbourhood,
+	furniture,
+	property_type,
+	size_sqm,
+	bedrooms,
+	bathrooms,
+	price_pcm,
+	price_per_sqm,
+	price_per_bedroom,
+	available_from,
+	available_today,
+	let_type,
+	scraping_date	
+FROM capstone_jmrs.spotahome_eda;
+						 
+						 
+--UPDATE spotahome_clean
+--SET let_type = NULL 
+--WHERE let_type = '';						 
+						 
 
  
 --------------------------------------------------
 --DROP TABLE spotahome_merged;
+--DROP TABLE spotahome_eda;
+--DROP TABLE spotahome_clean;
+--DROP TABLE platforms_complete;
+						 
+						 
+						 
+						 
+						 
+						 
+						 
 						 
 						 
