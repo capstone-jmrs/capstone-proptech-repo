@@ -97,7 +97,7 @@ ALTER TABLE spotahome_merged
 --------------------------------------------------
  UPDATE spotahome_merged
 	SET available_today = CASE 
-      						WHEN available_from = CURRENT_DATE  THEN 'available'
+      						WHEN available_from = '2022-10-05'  THEN 'available'
       						ELSE 'occupied'
 						  END;
 						 

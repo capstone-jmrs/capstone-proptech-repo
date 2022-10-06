@@ -290,13 +290,22 @@ DROP TABLE spotahome_final_3;
 DROP TABLE spotahome_eda;
 DROP TABLE capstone_jmrs.rightmove_details_julia;
 DROP TABLE capstone_jmrs.rightmove_details_julia_2;
-DROP TABLE capstone_jmrs.spotahome_df_complete;
+DROP TABLE capstone_jmrs."spotahome_df_complete_2022-10-04-10-25";
 DROP TABLE capstone_jmrs.spotahome_df_complete_2;
 DROP TABLE capstone_jmrs.spotahome_clean;
 DROP TABLE capstone_jmrs.platforms_complete;
+DROP TABLE capstone_jmrs."spotahome_df_details_complete_2022-10-05-20-00";
+DROP TABLE capstone_jmrs."spotahome_df_complete_2022-10-05";
+DROP TABLE capstone_jmrs.spotahome_df_complete_available_from;
+DROP TABLE capstone_jmrs.spotahome_df_complete_available_from_2022_10_02;
+DROP TABLE capstone_jmrs.spotahome_df_details_complete;
+DROP TABLE capstone_jmrs."spotahome_df_details_complete_2022-10-04-10-25";
+DROP TABLE capstone_jmrs."spotahome_df_details_complete_2022-10-05";
+DROP TABLE capstone_jmrs.spotahome_df_details_complete_2022_10_02;
 
-
-
+DROP TABLE capstone_jmrs.spotahome_clean;
+DROP TABLE capstone_jmrs.spotahome_eda;
+DROP TABLE capstone_jmrs.spotahome_merged;
 
 --------------------------------------------------
 --------------------------------------------------
@@ -313,7 +322,7 @@ ON se.platform_id = bc.platform_id;
 
 
 
-CREATE TABLE platforms_complete AS
+CREATE TABLE platforms_complete_1 AS
 (SELECT *
  FROM spotahome_clean
  UNION
@@ -333,3 +342,127 @@ select
 UPDATE capstone_jmrs.platforms_complete
 SET  platform = 'Spotahome'
 WHERE ( platform = 'spotahome');
+
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+
+
+
+
+
+SELECT size_sqm,
+	   price_pcm,
+	   price_per_sqm
+FROM platforms_complete pc 
+WHERE furniture = 'unfurnished'
+ORDER BY price_pcm DESC
+LIMIT 179;
+
+
+
+
+DELETE FROM platforms_complete_1 pc
+WHERE platform_id NOT IN (
+			SELECT platform_id 
+			FROM platforms_complete pc 
+			WHERE furniture = 'unfurnished'
+			ORDER BY price_pcm
+			LIMIT 712 OFFSET 894
+		);
+
+
+
+
+SELECT size_sqm,
+	   price_pcm,
+	   price_per_sqm
+FROM platforms_complete_1 pc 
+WHERE furniture = 'unfurnished'
+ORDER BY price_pcm;
+
+
+
+--delete lower 50%?
+DELETE FROM platforms_complete_1 pc
+WHERE ctid IN (
+				SELECT ctid
+				FROM platforms_complete
+				WHERE furniture = 'unfurnished'
+				ORDER BY price_pcm DESC
+				LIMIT 892
+			  );
+		
+			 
+			 
+--delete top 10%?	  
+DELETE FROM platforms_complete_1 pc
+WHERE ctid IN (
+				SELECT ctid
+				FROM platforms_complete
+				WHERE furniture = 'unfurnished'
+				ORDER BY price_pcm 
+				LIMIT 1606
+			  );
+
+			 
+DROP TABLE platforms_complete_1;
+			 
+SELECT *
+FROM platforms_complete_1
+WHERE furniture = 'unfurnished'
+ORDER BY price_pcm;
+
+
+DELETE FROM platforms_complete_1 
+WHERE platform_id = any (array(SELECT platform_id FROM platforms_complete_1 ORDER BY price_pcm LIMIT 892));
+			 
+			 
+
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+DROP TABLE platforms_complete;
+
+
+
+CREATE TABLE platforms_complete AS
+(SELECT *
+ FROM spotahome_clean
+ UNION
+ SELECT *
+ FROM blueground_clean
+ UNION
+ SELECT *
+ FROM rightmove_clean);
+
+
+
+
+-- 1785 rows for unfurnished
+-- lower 50 % -> 893 rows -> delete
+-- top 10% -> 179 rows -> delete
+-- remaining 40% -> 713 rows (from 894 - 1606)
+-- OFFSET: lower range
+-- LIMIT: Lower range + 712 = 1606
+
+
+DELETE FROM platforms_complete_1 pc
+WHERE platform_id NOT IN (
+			SELECT platform_id 
+			FROM platforms_complete pc 
+			WHERE furniture = 'unfurnished'
+			ORDER BY price_pcm
+			LIMIT 712 OFFSET 894
+		);
+
+
+
+
+SELECT size_sqm,
+	   price_pcm,
+	   price_per_sqm
+FROM platforms_complete_1 pc 
+WHERE furniture = 'unfurnished'
+ORDER BY price_pcm;
+
