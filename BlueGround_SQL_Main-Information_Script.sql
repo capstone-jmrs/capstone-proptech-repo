@@ -125,3 +125,24 @@ WHERE (neighbourhood = 'Bromley by Bow')  OR (neighbourhood = 'Limehouse')OR (ne
 SELECT *
 FROM capstone_jmrs.blueground_df_main
 WHERE available_from = '2022-11-11' ;
+
+----
+SELECT *
+FROM platforms_complete AS pc 
+WHERE pc.furniture = 'unfurnished'
+AND (SELECT  
+	(sum(price_pcm)/count( platform_id) )
+	 > 100
+	 )
+
+;
+----
+SELECT sum(price_pcm) AS Total_Price_PCM
+	,(sum(price_pcm)/count( platform_id) ) AS TEST
+FROM platforms_complete AS pc ;
+
+SELECT (sum(price_pcm)/count(DISTINCT  price_pcm) ) AS TEST
+FROM platforms_complete AS pc ;
+
+SELECT count(DISTINCT price_pcm) 
+FROM platforms_complete pc 

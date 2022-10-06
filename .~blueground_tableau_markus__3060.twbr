@@ -9,6 +9,7 @@
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
   <preferences>
@@ -21,6 +22,13 @@
     </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
   </_.fcp.AnimationOnByDefault.false...style>
   <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Parameter 1' datatype='integer' default-format='p0.00%' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+        <calculation class='tableau' formula='10' />
+        <range max='100' min='1' />
+      </column>
+    </datasource>
     <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' inline='true' name='federated.00905451ayg30k1br9wzf19nwm0o' version='18.1'>
       <connection class='federated'>
         <named-connections>
@@ -262,6 +270,9 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
+      <column caption='Property Type_as_Count' datatype='string' default-role='measure' default-type='quantitative' name='[Property Type (copy)_215328373987000320]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[property_type]' />
+      </column>
       <_.fcp.ObjectModelTableType.true...column caption='platforms_complete' datatype='table' name='[__tableau_internal_object_id__].[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]' role='measure' type='quantitative' />
       <column caption='Available From' datatype='date' name='[available_from]' role='dimension' type='ordinal' />
       <column caption='Available Today' datatype='string' name='[available_today]' role='dimension' type='nominal' />
@@ -278,7 +289,92 @@
       <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
       <column caption='Scraping Date' datatype='date' name='[scraping_date]' role='dimension' type='ordinal' />
       <column caption='Size Sqm' datatype='real' name='[size_sqm]' role='measure' type='quantitative' />
+      <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
+      <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:property_type:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Maisonette&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Apartment&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;End of Terrace&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;House of Multiple Occupation&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Semi-Detached&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mews&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Flat&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Hotel Room&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Cottage&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Block of Apartments&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ground Flat&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Link Detached House&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Studio&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Terraced&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Detached Bungalow&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;House Boat&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;House&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Detached&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Triplex&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Town House&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Penthouse&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Duplex&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:furniture:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;furnished&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;unfurnished&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
       </semantic-values>
@@ -302,13 +398,18 @@
             <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' name='federated.00905451ayg30k1br9wzf19nwm0o' />
           </datasources>
           <datasource-dependencies datasource='federated.00905451ayg30k1br9wzf19nwm0o'>
-            <column-instance column='[property_type]' derivation='Count' name='[cnt:property_type:qk]' pivot='key' type='quantitative' />
+            <column caption='Property Type_as_Count' datatype='string' default-role='measure' default-type='quantitative' name='[Property Type (copy)_215328373987000320]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[property_type]' />
+            </column>
             <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
             <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
             <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
             <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
             <column-instance column='[platform]' derivation='None' name='[none:platform:nk]' pivot='key' type='nominal' />
             <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Property Type (copy)_215328373987000320]' derivation='Count' name='[pcto:cnt:Property Type (copy)_215328373987000320:qk:9]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.00905451ayg30k1br9wzf19nwm0o].[property_type]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
             <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
             <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
           </datasource-dependencies>
@@ -318,10 +419,60 @@
           <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]'>
             <groupfilter function='member' level='[none:platform:nk]' member='&quot;Rightmove&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
+          <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]'>
+            <groupfilter function='level-members' level='[none:property_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
           <slices>
             <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]</column>
             <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]</column>
+            <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]</column>
           </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.00905451ayg30k1br9wzf19nwm0o].[pcto:cnt:Property Type (copy)_215328373987000320:qk:9]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]' />
+              <text column='[federated.00905451ayg30k1br9wzf19nwm0o].[pcto:cnt:Property Type (copy)_215328373987000320:qk:9]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00905451ayg30k1br9wzf19nwm0o].[pcto:cnt:Property Type (copy)_215328373987000320:qk:9]</rows>
+        <cols>[federated.00905451ayg30k1br9wzf19nwm0o].[none:neighbourhood:nk]</cols>
+      </table>
+      <simple-id uuid='{25D6638E-009A-429D-9AF2-D504E5D03163}' />
+    </worksheet>
+    <worksheet name='10 (Net) Furnished vs. Unfurnished'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' name='federated.00905451ayg30k1br9wzf19nwm0o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00905451ayg30k1br9wzf19nwm0o'>
+            <column-instance column='[price_pcm]' derivation='Avg' name='[avg:price_pcm:qk]' pivot='key' type='quantitative' />
+            <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column-instance column='[platform]' derivation='None' name='[none:platform:nk]' pivot='key' type='nominal' />
+            <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
+            <column caption='Price Pcm' datatype='real' name='[price_pcm]' role='measure' type='quantitative' />
+          </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style />
@@ -332,62 +483,21 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <text column='[federated.00905451ayg30k1br9wzf19nwm0o].[cnt:property_type:qk]' />
+              <text column='[federated.00905451ayg30k1br9wzf19nwm0o].[avg:price_pcm:qk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
-                <format attr='mark-labels-cull' value='true' />
               </style-rule>
             </style>
           </pane>
         </panes>
-        <rows>([federated.00905451ayg30k1br9wzf19nwm0o].[none:neighbourhood:nk] * [federated.00905451ayg30k1br9wzf19nwm0o].[cnt:property_type:qk])</rows>
-        <cols>[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]</cols>
-      </table>
-      <simple-id uuid='{25D6638E-009A-429D-9AF2-D504E5D03163}' />
-    </worksheet>
-    <worksheet name='10 Apartment Size'>
-      <table>
-        <view>
-          <datasources />
-          <aggregation value='true' />
-        </view>
-        <style />
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-        </panes>
-        <rows />
-        <cols />
-      </table>
-      <simple-id uuid='{C20B9FA5-4B7B-4A74-AAA3-59538C99C2B8}' />
-    </worksheet>
-    <worksheet name='11 (Net) Furnished vs. Unfurnished'>
-      <table>
-        <view>
-          <datasources />
-          <aggregation value='true' />
-        </view>
-        <style />
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-        </panes>
-        <rows />
-        <cols />
+        <rows>([federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk] / [federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk])</rows>
+        <cols>[federated.00905451ayg30k1br9wzf19nwm0o].[none:neighbourhood:nk]</cols>
       </table>
       <simple-id uuid='{21722A06-557C-49C8-9DDF-8291F5EE1B71}' />
     </worksheet>
-    <worksheet name='12 (per sqm) Furnished vs. Unfurnished'>
+    <worksheet name='11 (per sqm) Furnished vs. Unfurnished'>
       <table>
         <view>
           <datasources />
@@ -410,24 +520,140 @@
     <worksheet name='2 Furnished vs. Unfurnished market offer ratio (by neighbourhoods) with RM'>
       <table>
         <view>
-          <datasources />
+          <datasources>
+            <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' name='federated.00905451ayg30k1br9wzf19nwm0o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00905451ayg30k1br9wzf19nwm0o'>
+            <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column-instance column='[platform]' derivation='None' name='[none:platform:nk]' pivot='key' type='nominal' />
+            <column-instance column='[furniture]' derivation='Count' name='[pcto:cnt:furniture:qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='CellInPane' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[furniture]' derivation='Count' name='[pcto:cnt:furniture:qk:5]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.00905451ayg30k1br9wzf19nwm0o].[furniture]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]'>
+            <groupfilter function='member' level='[none:platform:nk]' member='&quot;Rightmove&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.00905451ayg30k1br9wzf19nwm0o].[pcto:cnt:furniture:qk:5]' value='p0%' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]' />
+              <text column='[federated.00905451ayg30k1br9wzf19nwm0o].[pcto:cnt:furniture:qk:5]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.00905451ayg30k1br9wzf19nwm0o].[pcto:cnt:furniture:qk:3]</rows>
+        <cols>[federated.00905451ayg30k1br9wzf19nwm0o].[none:neighbourhood:nk]</cols>
       </table>
       <simple-id uuid='{D970E145-BEB8-4B31-B672-673EA6B0850B}' />
     </worksheet>
     <worksheet name='3a Rental Price (Net)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' name='federated.00905451ayg30k1br9wzf19nwm0o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00905451ayg30k1br9wzf19nwm0o'>
+            <column-instance column='[price_pcm]' derivation='Avg' name='[avg:price_pcm:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price_per_bedroom]' derivation='Avg' name='[avg:price_per_bedroom:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price_per_sqm]' derivation='Avg' name='[avg:price_per_sqm:qk]' pivot='key' type='quantitative' />
+            <column caption='Bedrooms' datatype='real' name='[bedrooms]' role='measure' type='quantitative' />
+            <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column-instance column='[bedrooms]' derivation='None' name='[none:bedrooms:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
+            <column caption='Price Pcm' datatype='real' name='[price_pcm]' role='measure' type='quantitative' />
+            <column caption='Price Per Bedroom' datatype='real' name='[price_per_bedroom]' role='measure' type='quantitative' />
+            <column caption='Price Per Sqm' datatype='real' name='[price_per_sqm]' role='measure' type='quantitative' />
+            <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00905451ayg30k1br9wzf19nwm0o].[avg:price_pcm:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00905451ayg30k1br9wzf19nwm0o].[avg:price_per_bedroom:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00905451ayg30k1br9wzf19nwm0o].[avg:price_per_sqm:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.00905451ayg30k1br9wzf19nwm0o].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.00905451ayg30k1br9wzf19nwm0o].[avg:price_pcm:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00905451ayg30k1br9wzf19nwm0o].[avg:price_per_bedroom:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00905451ayg30k1br9wzf19nwm0o].[avg:price_per_sqm:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]'>
+            <groupfilter function='member' level='[none:furniture:nk]' member='&quot;unfurnished&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]'>
+            <groupfilter function='level-members' level='[none:property_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]</column>
+            <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]</column>
+            <column>[federated.00905451ayg30k1br9wzf19nwm0o].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.00905451ayg30k1br9wzf19nwm0o].[:Measure Names]' value='84' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.00905451ayg30k1br9wzf19nwm0o].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00905451ayg30k1br9wzf19nwm0o].[none:neighbourhood:nk]</rows>
+        <cols>([federated.00905451ayg30k1br9wzf19nwm0o].[:Measure Names] * [federated.00905451ayg30k1br9wzf19nwm0o].[none:bedrooms:qk])</cols>
+      </table>
+      <simple-id uuid='{1FE3C7FC-0FA5-43E7-80D6-FCE5671E31E3}' />
+    </worksheet>
+    <worksheet name='3b Rental Price (per sqm)'>
       <table>
         <view>
           <datasources />
@@ -445,7 +671,7 @@
         <rows />
         <cols />
       </table>
-      <simple-id uuid='{1FE3C7FC-0FA5-43E7-80D6-FCE5671E31E3}' />
+      <simple-id uuid='{635B3B46-5689-4DAB-B217-1CE60B925A95}' />
     </worksheet>
     <worksheet name='4 Apartment distribution (No. Bedrooms)'>
       <table>
@@ -467,7 +693,7 @@
       </table>
       <simple-id uuid='{D9163BF4-1C9E-421D-ABCE-F97600880FA8}' />
     </worksheet>
-    <worksheet name='6 Apartment Size'>
+    <worksheet name='5 Apartment Size'>
       <table>
         <view>
           <datasources />
@@ -487,7 +713,7 @@
       </table>
       <simple-id uuid='{93E0C183-D36F-41E4-B359-63FD3ACB65D1}' />
     </worksheet>
-    <worksheet name='7 Occupancy Rates by distribution (no. of bedrooms)'>
+    <worksheet name='6 Occupancy Rates by distribution (no. of bedrooms)'>
       <table>
         <view>
           <datasources />
@@ -507,7 +733,7 @@
       </table>
       <simple-id uuid='{C18A040B-622E-4D75-9EBB-0DF6204D4752}' />
     </worksheet>
-    <worksheet name='8a Rental Price (Net)'>
+    <worksheet name='7a Rental Price (Net)'>
       <table>
         <view>
           <datasources />
@@ -527,7 +753,7 @@
       </table>
       <simple-id uuid='{0B18384E-F32F-4DF6-A877-E22B5838D963}' />
     </worksheet>
-    <worksheet name='8b Rental Price (per sqm)'>
+    <worksheet name='7b Rental Price (per sqm)'>
       <table>
         <view>
           <datasources />
@@ -547,7 +773,7 @@
       </table>
       <simple-id uuid='{0577D96A-B4AB-40CD-B857-1BCC1858A2DB}' />
     </worksheet>
-    <worksheet name='9 Apartment distribution (No. Bedrooms)'>
+    <worksheet name='8 Apartment distribution (No. Bedrooms)'>
       <table>
         <view>
           <datasources />
@@ -567,9 +793,29 @@
       </table>
       <simple-id uuid='{8B2A4608-82F2-434C-A39F-BA9ED85DCE74}' />
     </worksheet>
+    <worksheet name='9 Apartment Size'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C20B9FA5-4B7B-4A74-AAA3-59538C99C2B8}' />
+    </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='1 Overall size of available apartment rental offer only rightmove (unfurnished)'>
+    <window class='worksheet' name='1 Overall size of available apartment rental offer only rightmove (unfurnished)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -591,14 +837,16 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
+            <card param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]' type='filter' />
             <card param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]' type='filter' />
             <card param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]' type='color' />
           </strip>
         </edge>
       </cards>
       <simple-id uuid='{85845A71-EDA0-4AAF-ABB0-58A1CAEB1E1A}' />
     </window>
-    <window class='worksheet' name='2 Furnished vs. Unfurnished market offer ratio (by neighbourhoods) with RM'>
+    <window class='worksheet' maximized='true' name='2 Furnished vs. Unfurnished market offer ratio (by neighbourhoods) with RM'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -616,6 +864,12 @@
           </strip>
           <strip size='31'>
             <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]' type='color' />
           </strip>
         </edge>
       </cards>
@@ -628,6 +882,36 @@
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]' type='filter' />
+            <card param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:property_type:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D587D8E3-9B18-4428-B65D-EE691479CD99}' />
+    </window>
+    <window class='worksheet' name='3b Rental Price (per sqm)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
           </strip>
         </edge>
         <edge name='top'>
@@ -642,7 +926,7 @@
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{D587D8E3-9B18-4428-B65D-EE691479CD99}' />
+      <simple-id uuid='{3BF014A6-5A75-464C-908F-4F150597EBC0}' />
     </window>
     <window class='worksheet' name='4 Apartment distribution (No. Bedrooms)'>
       <cards>
@@ -667,7 +951,7 @@
       </cards>
       <simple-id uuid='{63CAED71-98DB-48D6-81B3-2E60AF61E300}' />
     </window>
-    <window class='worksheet' name='6 Apartment Size'>
+    <window class='worksheet' name='5 Apartment Size'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -690,7 +974,7 @@
       </cards>
       <simple-id uuid='{2D1B077E-DC33-4D01-A474-10B70663CBD8}' />
     </window>
-    <window class='worksheet' name='7 Occupancy Rates by distribution (no. of bedrooms)'>
+    <window class='worksheet' name='6 Occupancy Rates by distribution (no. of bedrooms)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -713,7 +997,7 @@
       </cards>
       <simple-id uuid='{D8476CFB-0061-49C1-A25A-3B00E93793B3}' />
     </window>
-    <window class='worksheet' name='8a Rental Price (Net)'>
+    <window class='worksheet' name='7a Rental Price (Net)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -736,7 +1020,7 @@
       </cards>
       <simple-id uuid='{33B9696D-9A1A-45F6-A015-8EA62A1F1B00}' />
     </window>
-    <window class='worksheet' name='8b Rental Price (per sqm)'>
+    <window class='worksheet' name='7b Rental Price (per sqm)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -759,7 +1043,7 @@
       </cards>
       <simple-id uuid='{4D762776-18D5-4E53-9B21-CB18C7BFD290}' />
     </window>
-    <window class='worksheet' name='9 Apartment distribution (No. Bedrooms)'>
+    <window class='worksheet' name='8 Apartment distribution (No. Bedrooms)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -782,7 +1066,7 @@
       </cards>
       <simple-id uuid='{49EF0C42-3B56-4984-BCDD-EC3E3CBD4F41}' />
     </window>
-    <window class='worksheet' name='10 Apartment Size'>
+    <window class='worksheet' name='9 Apartment Size'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -805,7 +1089,7 @@
       </cards>
       <simple-id uuid='{71757570-FF8D-4851-845D-EA711CBA182A}' />
     </window>
-    <window class='worksheet' name='11 (Net) Furnished vs. Unfurnished'>
+    <window class='worksheet' name='10 (Net) Furnished vs. Unfurnished'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -826,9 +1110,16 @@
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>0.5</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
       <simple-id uuid='{B0D3F3BF-A452-4175-8AF1-3E949E092BF7}' />
     </window>
-    <window class='worksheet' name='12 (per sqm) Furnished vs. Unfurnished'>
+    <window class='worksheet' name='11 (per sqm) Furnished vs. Unfurnished'>
       <cards>
         <edge name='left'>
           <strip size='160'>
