@@ -320,9 +320,10 @@ ON se.platform_id = bc.platform_id;
 						 
 
 
+DROP TABLE platforms_complete_3;
 
 
-CREATE TABLE platforms_complete_1 AS
+CREATE TABLE platforms_complete_3 AS
 (SELECT *
  FROM spotahome_clean
  UNION
@@ -347,6 +348,11 @@ WHERE ( platform = 'spotahome');
 --------------------------------------------------
 --------------------------------------------------
 
+
+SELECT *
+FROM rightmove_clean rc
+WHERE furniture = 'unfurnished'
+ORDER BY price_pcm;
 
 
 
@@ -426,7 +432,7 @@ DROP TABLE platforms_complete;
 
 
 
-CREATE TABLE platforms_complete AS
+CREATE TABLE platforms_complete_2 AS
 (SELECT *
  FROM spotahome_clean
  UNION
@@ -466,3 +472,14 @@ FROM platforms_complete_1 pc
 WHERE furniture = 'unfurnished'
 ORDER BY price_pcm;
 
+
+
+
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+
+SELECT *
+FROM platforms_complete_3 pc 
+WHERE furniture = 'unfurnished'
+ORDER BY price_pcm;
