@@ -36,14 +36,14 @@
             <connection authentication='username-password' class='postgres' dbname='postgres' one-time-sql='' port='5432' server='data-analytics-course.c8g8r1deus2v.eu-central-1.rds.amazonaws.com' username='markussteinke' />
           </named-connection>
         </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.0iq8l471xnoqiv1a726fm1r3n669' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='postgres.0iq8l471xnoqiv1a726fm1r3n669' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.0iq8l471xnoqiv1a726fm1r3n669' name='platforms_complete_3' table='[capstone_jmrs].[platforms_complete_3]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='postgres.0iq8l471xnoqiv1a726fm1r3n669' name='platforms_complete_3' table='[capstone_jmrs].[platforms_complete_3]' type='table' />
         <metadata-records>
           <metadata-record class='column'>
             <remote-name>platform_id</remote-name>
             <remote-type>129</remote-type>
             <local-name>[platform_id]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>platform_id</remote-alias>
             <ordinal>1</ordinal>
             <local-type>string</local-type>
@@ -55,13 +55,13 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>platform</remote-name>
             <remote-type>129</remote-type>
             <local-name>[platform]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>platform</remote-alias>
             <ordinal>2</ordinal>
             <local-type>string</local-type>
@@ -73,13 +73,13 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>neighbourhood</remote-name>
             <remote-type>129</remote-type>
             <local-name>[neighbourhood]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>neighbourhood</remote-alias>
             <ordinal>3</ordinal>
             <local-type>string</local-type>
@@ -91,13 +91,13 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>furniture</remote-name>
             <remote-type>129</remote-type>
             <local-name>[furniture]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>furniture</remote-alias>
             <ordinal>4</ordinal>
             <local-type>string</local-type>
@@ -109,13 +109,13 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>property_type</remote-name>
             <remote-type>129</remote-type>
             <local-name>[property_type]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>property_type</remote-alias>
             <ordinal>5</ordinal>
             <local-type>string</local-type>
@@ -127,103 +127,103 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>size_sqm</remote-name>
             <remote-type>5</remote-type>
             <local-name>[size_sqm]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>size_sqm</remote-alias>
             <ordinal>6</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>bedrooms</remote-name>
             <remote-type>5</remote-type>
             <local-name>[bedrooms]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>bedrooms</remote-alias>
             <ordinal>7</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>bathrooms</remote-name>
             <remote-type>5</remote-type>
             <local-name>[bathrooms]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>bathrooms</remote-alias>
             <ordinal>8</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>price_pcm</remote-name>
             <remote-type>5</remote-type>
             <local-name>[price_pcm]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>price_pcm</remote-alias>
             <ordinal>9</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>price_per_sqm</remote-name>
             <remote-type>5</remote-type>
             <local-name>[price_per_sqm]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>price_per_sqm</remote-alias>
             <ordinal>10</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>price_per_bedroom</remote-name>
             <remote-type>5</remote-type>
             <local-name>[price_per_bedroom]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>price_per_bedroom</remote-alias>
             <ordinal>11</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>available_from</remote-name>
             <remote-type>7</remote-type>
             <local-name>[available_from]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>available_from</remote-alias>
             <ordinal>12</ordinal>
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>available_today</remote-name>
             <remote-type>129</remote-type>
             <local-name>[available_today]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>available_today</remote-alias>
             <ordinal>13</ordinal>
             <local-type>string</local-type>
@@ -235,13 +235,13 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>let_type</remote-name>
             <remote-type>129</remote-type>
             <local-name>[let_type]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>let_type</remote-alias>
             <ordinal>14</ordinal>
             <local-type>string</local-type>
@@ -253,19 +253,37 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>scraping_date</remote-name>
             <remote-type>7</remote-type>
             <local-name>[scraping_date]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
+            <parent-name>[platforms_complete_3]</parent-name>
             <remote-alias>scraping_date</remote-alias>
             <ordinal>15</ordinal>
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>percentile_view</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[percentile_view]</local-name>
+            <parent-name>[platforms_complete_3]</parent-name>
+            <remote-alias>percentile_view</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
         </metadata-records>
       </connection>
@@ -273,7 +291,7 @@
       <column caption='Property Type_as_Count' datatype='string' default-role='measure' default-type='quantitative' name='[Property Type (copy)_215328373987000320]' role='dimension' type='nominal'>
         <calculation class='tableau' formula='[property_type]' />
       </column>
-      <_.fcp.ObjectModelTableType.true...column caption='platforms_complete' datatype='table' name='[__tableau_internal_object_id__].[platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='platforms_complete_3' datatype='table' name='[__tableau_internal_object_id__].[platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8]' role='measure' type='quantitative' />
       <column caption='Available From' datatype='date' name='[available_from]' role='dimension' type='ordinal' />
       <column caption='Available Today' datatype='string' name='[available_today]' role='dimension' type='nominal' />
       <column caption='Bathrooms' datatype='real' name='[bathrooms]' role='measure' type='quantitative' />
@@ -281,6 +299,7 @@
       <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
       <column caption='Let Type' datatype='string' name='[let_type]' role='dimension' type='nominal' />
       <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+      <column caption='Percentile View' datatype='string' name='[percentile_view]' role='dimension' type='nominal' />
       <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
       <column caption='Platform Id' datatype='string' name='[platform_id]' role='dimension' type='nominal' />
       <column caption='Price Pcm' datatype='real' name='[price_pcm]' role='measure' type='quantitative' />
@@ -290,87 +309,18 @@
       <column caption='Scraping Date' datatype='date' name='[scraping_date]' role='dimension' type='ordinal' />
       <column caption='Size Sqm' datatype='real' name='[size_sqm]' role='measure' type='quantitative' />
       <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
-      <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[none:property_type:nk]' type='palette'>
-            <map to='#499894'>
-              <bucket>&quot;Maisonette&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;Apartment&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;End of Terrace&quot;</bucket>
-            </map>
-            <map to='#79706e'>
-              <bucket>&quot;House of Multiple Occupation&quot;</bucket>
-            </map>
-            <map to='#79706e'>
-              <bucket>&quot;Semi-Detached&quot;</bucket>
-            </map>
-            <map to='#86bcb6'>
-              <bucket>&quot;Mews&quot;</bucket>
-            </map>
-            <map to='#8cd17d'>
-              <bucket>&quot;Flat&quot;</bucket>
-            </map>
-            <map to='#9d7660'>
-              <bucket>&quot;Hotel Room&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;Cottage&quot;</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>&quot;Block of Apartments&quot;</bucket>
-            </map>
-            <map to='#b6992d'>
-              <bucket>&quot;Ground Flat&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;Link Detached House&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;Studio&quot;</bucket>
-            </map>
-            <map to='#d37295'>
-              <bucket>&quot;Terraced&quot;</bucket>
-            </map>
-            <map to='#d4a6c8'>
-              <bucket>&quot;Detached Bungalow&quot;</bucket>
-            </map>
-            <map to='#d7b5a6'>
-              <bucket>&quot;House Boat&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;NA&quot;</bucket>
-            </map>
-            <map to='#f1ce63'>
-              <bucket>&quot;House&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;Detached&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;Triplex&quot;</bucket>
-            </map>
-            <map to='#fabfd2'>
-              <bucket>&quot;Town House&quot;</bucket>
-            </map>
-            <map to='#ff9d9a'>
-              <bucket>&quot;Penthouse&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>&quot;Duplex&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:furniture:nk]' type='palette'>
             <map to='#4e79a7'>
-              <bucket>&quot;furnished&quot;</bucket>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;unfurnished&quot;</bucket>
             </map>
             <map to='#f28e2b'>
-              <bucket>&quot;unfurnished&quot;</bucket>
+              <bucket>&quot;furnished&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -381,9 +331,9 @@
       <date-options start-of-week='monday' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
-          <object caption='platforms_complete' id='platforms_complete (capstone_jmrs.platforms_complete)_8C4FBD29804146B7842943BA8DD3B911'>
+          <object caption='platforms_complete_3' id='platforms_complete_3 (capstone_jmrs.platforms_complete_3)_64FB66A4C98B451981CB27474C4D66E8'>
             <properties context=''>
-              <relation connection='postgres.0iq8l471xnoqiv1a726fm1r3n669' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
+              <relation connection='postgres.0iq8l471xnoqiv1a726fm1r3n669' name='platforms_complete_3' table='[capstone_jmrs].[platforms_complete_3]' type='table' />
             </properties>
           </object>
         </objects>
@@ -572,6 +522,63 @@
         <cols>[federated.00905451ayg30k1br9wzf19nwm0o].[none:neighbourhood:nk]</cols>
       </table>
       <simple-id uuid='{D970E145-BEB8-4B31-B672-673EA6B0850B}' />
+    </worksheet>
+    <worksheet name='2 Furnished vs. Unfurnished market offer ratio (by neighbourhoods) with RM (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' name='federated.00905451ayg30k1br9wzf19nwm0o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00905451ayg30k1br9wzf19nwm0o'>
+            <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column-instance column='[percentile_view]' derivation='None' name='[none:percentile_view:nk]' pivot='key' type='nominal' />
+            <column-instance column='[platform]' derivation='None' name='[none:platform:nk]' pivot='key' type='nominal' />
+            <column-instance column='[furniture]' derivation='Count' name='[pcto:cnt:furniture:qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='CellInPane' type='PctTotal' />
+            </column-instance>
+            <column caption='Percentile View' datatype='string' name='[percentile_view]' role='dimension' type='nominal' />
+            <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
+            <column caption='Price Pcm' datatype='real' name='[price_pcm]' role='measure' type='quantitative' />
+            <column-instance column='[price_pcm]' derivation='Sum' name='[sum:price_pcm:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:percentile_view:nk]'>
+            <groupfilter function='member' level='[none:percentile_view:nk]' member='&quot;targeted price range&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]'>
+            <groupfilter function='member' level='[none:platform:nk]' member='&quot;Rightmove&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]</column>
+            <column>[federated.00905451ayg30k1br9wzf19nwm0o].[none:percentile_view:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]' />
+              <text column='[federated.00905451ayg30k1br9wzf19nwm0o].[sum:price_pcm:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00905451ayg30k1br9wzf19nwm0o].[pcto:cnt:furniture:qk:3]</rows>
+        <cols>[federated.00905451ayg30k1br9wzf19nwm0o].[none:neighbourhood:nk]</cols>
+      </table>
+      <simple-id uuid='{9340F8F9-DB37-464E-91C2-E61B327C4BB0}' />
     </worksheet>
     <worksheet name='3a Rental Price (Net)'>
       <table>
@@ -846,7 +853,7 @@
       </cards>
       <simple-id uuid='{85845A71-EDA0-4AAF-ABB0-58A1CAEB1E1A}' />
     </window>
-    <window class='worksheet' maximized='true' name='2 Furnished vs. Unfurnished market offer ratio (by neighbourhoods) with RM'>
+    <window class='worksheet' name='2 Furnished vs. Unfurnished market offer ratio (by neighbourhoods) with RM'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -874,6 +881,35 @@
         </edge>
       </cards>
       <simple-id uuid='{E27139BC-8205-4AA2-864C-07AB055B9CE0}' />
+    </window>
+    <window class='worksheet' maximized='true' name='2 Furnished vs. Unfurnished market offer ratio (by neighbourhoods) with RM (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:platform:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.00905451ayg30k1br9wzf19nwm0o].[none:furniture:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5071F39C-7E73-4DB9-9EDB-DC4195C8AA47}' />
     </window>
     <window class='worksheet' name='3a Rental Price (Net)'>
       <cards>
@@ -1110,13 +1146,6 @@
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <current-page>
-          <multibucket>
-            <bucket>0.5</bucket>
-          </multibucket>
-        </current-page>
-      </viewpoint>
       <simple-id uuid='{B0D3F3BF-A452-4175-8AF1-3E949E092BF7}' />
     </window>
     <window class='worksheet' name='11 (per sqm) Furnished vs. Unfurnished'>
