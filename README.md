@@ -3,10 +3,6 @@ Repository for neuefische - Capstone - Project
 
 
 ## Spotahome:
-1. spotahome_julia_clean.ipynb<br> get all data in two tables and a bit of cleaning
+1. spotahome_julia_complete.ipynb<br> get all data in two tables, clean, split, combine, rename columns, perform Eda, calculate new columns, simple plots<br><br> tables:<br> raw data -> spotahome_df_complete, spotahome_df_details_complete<br> both tables merged, clean-up with SQL -> spotahome_merged<br> EDA with Python -> spotahome_eda<br> bringin the columns in correct order -> spotahome_clean
 
-2. spotahome_julia_clean.sql<br> combine two tables, clean, split, combine, rename columns
-
-3. spotahome_julia_eda.ipynb<br> perform Eda; calculate new columns; simple plots
-
-4. spotahome_julia.twb<br> visualisation in tableau
+2. platforms_complete_julia.twb<br> visualisation in tableau on combined table from all 3 platforms
