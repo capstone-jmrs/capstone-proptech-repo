@@ -196,6 +196,123 @@ WHERE prices_pcm = 'POA'; --1 updated
 
 ALTER TABLE rightmove_3
 ALTER COLUMN prices_pcm TYPE INT USING prices_pcm::INT;
+----
+----
+----
+
+--Push from 10/10/2022
+SELECT *
+FROM rightmove_total 
+WHERE furniture IS NULL; 
+
+DELETE FROM rightmove_total
+WHERE property_type IS NULL AND available_from IS NULL AND let_type IS NULL; --101rows deleted (those, that had been removed between overview scraping and detail scraping)
+
+ALTER TABLE rightmove_total 
+ALTER COLUMN scraping_date TYPE DATE USING scraping_date::DATE;
+------
+SELECT DISTINCT available_from
+FROM rightmove_total;
+
+UPDATE rightmove_total
+SET available_from = NULL
+WHERE available_from = 'Ask agent';--2553 Updated
+
+UPDATE rightmove_total
+SET available_from = '23/09/2022'
+WHERE available_from = 'Now';-- 2136 Updated
+
+ALTER TABLE rightmove_total 
+ALTER COLUMN available_from TYPE DATE USING TO_DATE(available_from, 'DD/MM/YYYY');
+
+ALTER TABLE rightmove_total
+ADD COLUMN title TEXT;
+----------------------
+----------------------
+
+
+--'final' platform table - ready to be merged
+CREATE TABLE rightmove_clean AS
+SELECT
+	platform_id,
+	platform,
+	neighbourhood,
+	furniture,
+	property_type,
+	size_sqm,
+	bedrooms,
+	bathrooms,
+	price_pcm,
+	price_per_sqm,
+	price_per_bedroom,
+	available_from,
+	available_today,
+	let_type,
+	scraping_date
+FROM rightmove_clean_1;
+	
+	
+SELECT * FROM rightmove_clean;
+
+UPDATE rightmove_clean
+SET price_per_sqm = ROUND(price_per_sqm::numeric, 2);
+
+UPDATE rightmove_clean
+SET price_per_bedroom = price_pcm
+WHERE price_per_bedroom = 'Infinity';
+
+SELECT * FROM rightmove_clean WHERE price_per_bedroom = 'Infinity';
+
+UPDATE rightmove_clean
+SET price_per_bedroom = ROUND(price_per_bedroom::numeric, 2);
+	
+
+
+
+	
+	
+
+FROM capstone_jmrs.rightmove_total;
+
+UPDATE platforms_complete
+SET furniture = 'furnished'
+WHERE furniture IS NULL; --1 updated
+
+SELECT * FROM platforms_complete WHERE price_per_sqm IS NOT NULL ORDER BY price_per_sqm DESC;
+
+SELECT * FROM platforms_complete ORDER BY price_pcm ASC;
+SELECT * FROM platforms_complete WHERE furniture IS NULL;
+
+SELECT * FROM platforms_complete_3
+WHERE furniture IS NULL;
+
+UPDATE platforms_complete_3
+SET furniture = 'furnished'
+
+UPDATE platforms_complete_3
+SET percentile_view = 'out of range'
+WHERE platform_id ='127311578';
+
+SELECT COUNT(*) FROM rightmove_clean rc 
+WHERE price_per_sqm > 103 AND furniture = 'furnished';
+
+SELECT COUNT(*) FROM rightmove_clean rc 
+WHERE price_per_sqm > 79 AND furniture = 'furnished';
+
+SELECT * FROM platforms_complete_3 WHERE price_pcm > 100000;
+
+ALTER TABLE platforms_complete_3
+RENAME COLUMN price_per_sqm TO price_sqm;
+
+SELECT price_sqm
+FROM platforms_complete_3 
+WHERE price_sqm IS NOT NULL AND platform = 'Rightmove' AND furniture = 'unfurnished'
+ORDER BY 1 ASC;
+
+SELECT DISTINCT property_type FROM platforms_complete_3;
+
+SELECT * FROM platforms_complete_3 WHERE property_type = 'NA'
+
 
 
 
