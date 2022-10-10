@@ -481,5 +481,5 @@ ORDER BY price_pcm;
 
 SELECT *
 FROM platforms_complete_3 pc 
-WHERE furniture = 'unfurnished'
+WHERE furniture = 'furnished'
 ORDER BY price_pcm;
