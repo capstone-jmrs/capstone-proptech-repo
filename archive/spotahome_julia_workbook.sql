@@ -481,5 +481,61 @@ ORDER BY price_pcm;
 
 SELECT *
 FROM platforms_complete_3 pc 
+WHERE furniture = 'unfurnished'
+AND available_today = 'available'
+ORDER BY available_from;
+
+
+
+
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+--- changes 10.10.2022
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+DROP TABLE platforms_complete_5;
+
+SELECT *
+INTO platforms_complete_5
+FROM platforms_complete_3;
+
+
+DELETE
+FROM platforms_complete_5
+WHERE property_type != 'Apartment'
+	AND property_type != 'Block of Apartments'
+	AND property_type != 'Flat'
+	AND property_type != 'Ground Flat'
+	AND property_type != 'Penthouse'
+	AND property_type != 'Studio';
+
+
+ALTER TABLE platforms_complete_5
+  DROP COLUMN price_band,
+  DROP COLUMN price_sqm_band;
+ 
+ 
+DELETE
+FROM platforms_complete_5
 WHERE furniture = 'furnished'
-ORDER BY price_pcm;
+	AND price > '8001';
+
+
+--------------------------------------------------
+--------------------------------------------------
+SELECT *
+FROM platforms_complete_5
+WHERE furniture = 'furnished'
+ORDER BY price;
+--4532
+
+SELECT *
+FROM platforms_complete_5
+WHERE furniture = 'unfurnished'
+ORDER BY price;
+--1336
+
+
+
