@@ -145,4 +145,46 @@ SELECT (sum(price_pcm)/count(DISTINCT  price_pcm) ) AS TEST
 FROM platforms_complete AS pc ;
 
 SELECT count(DISTINCT price_pcm) 
-FROM platforms_complete pc 
+FROM platforms_complete pc ;
+
+---
+
+
+ UPDATE capstone_jmrs.platforms_complete
+	SET available_today = CASE 
+      						WHEN available_from = '2022-10-07'   THEN 'available'
+      						ELSE 'occupied'
+						  END;
+------
+						 
+select
+  percentile_cont(0.25) within group (order by price_pcm asc) as percentile_25,
+  percentile_cont(0.75) within group (order by price_pcm asc) as percentile_50,
+  percentile_cont(0.75) within group (order by price_pcm asc) as percentile_75,
+  percentile_cont(0.90) within group (order by price_pcm asc) as percentile_90,
+  percentile_cont(0.95) within group (order by price_pcm asc) as percentile_95
+from capstone_jmrs.platforms_complete ;
+
+-----
+ALTER TABLE capstone_jmrs.platforms_complete_2
+ADD column percentile_view VarChar ; 
+---
+
+ UPDATE  capstone_jmrs.platforms_complete_2
+	SET percentile_view = CASE 
+      						WHEN 
+      						(capstone_jmrs.rightmove_clean.price_pcm > percentile_cont(0.50) within group (order by capstone_jmrs.rightmove_clean.price_pcm) AND furniture = 'unfurnished')
+      						AND  
+      						(capstone_jmrs.rightmove_clean.price_pcm < percentile_cont(0.90) within group (order by capstone_jmrs.rightmove_clean.price_pcm) AND furniture = 'unfurnished')
+      						FROM capstone_jmrs.rightmove_clean
+      						THEN 'targeted price range'
+      						ELSE 'out of range'
+						  END;
+-------
+						 
+
+CREATE TABLE capstone_jmrs.platforms_complete_4 AS 
+SELECT
+*
+FROM
+    capstone_jmrs.platforms_complete_3 ; 
