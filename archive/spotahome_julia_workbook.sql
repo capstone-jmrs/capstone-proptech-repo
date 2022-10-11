@@ -523,6 +523,11 @@ WHERE furniture = 'furnished'
 	AND price > '8001';
 
 
+
+DELETE
+FROM platforms_complete_5
+WHERE size_sqm < '10';
+
 --------------------------------------------------
 --------------------------------------------------
 SELECT *
@@ -538,4 +543,22 @@ ORDER BY price;
 --1336
 
 
+SELECT *
+FROM platforms_complete_5
+WHERE platform = 'Rightmove'
+ORDER BY price_sqm;
+
+
+
+
+
+
+
+SELECT COUNT(size_sqm)
+FROM spotahome_clean;
+--267
+
+SELECT COUNT(*)
+FROM spotahome_clean;
+--835
 
