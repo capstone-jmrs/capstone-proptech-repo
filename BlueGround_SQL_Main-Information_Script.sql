@@ -188,3 +188,15 @@ SELECT
 *
 FROM
     capstone_jmrs.platforms_complete_3 ; 
+   
+   ----
+
+SELECT  *
+FROM capstone_jmrs.platforms_complete_4
+WHERE platform = 'Blueground'
+ORDER BY price_sqm desc ;
+----
+SELECT  *
+FROM capstone_jmrs.platforms_complete_4
+WHERE platform = 'Rightmove' AND price_sqm IS NOT NULL 
+ORDER BY price_sqm ASC  ;
