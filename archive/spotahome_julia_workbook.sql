@@ -515,18 +515,43 @@ WHERE property_type != 'Apartment'
 ALTER TABLE platforms_complete_5
   DROP COLUMN price_band,
   DROP COLUMN price_sqm_band;
+
+
+--------------------------------------------------
+--------------------------------------------------
  
  
+CREATE TABLE platforms_complete AS
+(SELECT *
+ FROM spotahome_clean
+ UNION
+ SELECT *
+ FROM blueground_clean
+ UNION
+ SELECT *
+ FROM rightmove_clean);
+ 
+
+
 DELETE
-FROM platforms_complete_5
-WHERE furniture = 'furnished'
+FROM platforms_complete
+WHERE detailed_furniture = 'furnished'
 	AND price > '8001';
 
 
+DELETE
+FROM platforms_complete
+WHERE detailed_furniture = 'unfurnished'
+	AND price > '6001';
+
+
+--------------------------------------------------
+--------------------------------------------------
+
 
 DELETE
 FROM platforms_complete_5
-WHERE size_sqm < '10';
+WHERE bedrooms IS NULL;
 
 --------------------------------------------------
 --------------------------------------------------
@@ -534,22 +559,32 @@ SELECT *
 FROM platforms_complete_5
 WHERE furniture = 'furnished'
 ORDER BY price;
---4532
+--4522
 
 SELECT *
-FROM platforms_complete_5
+FROM platforms_complete_4
 WHERE furniture = 'unfurnished'
 ORDER BY price;
---1336
+--1333
 
 
-SELECT *
+SELECT COUNT(*),
+		platform
 FROM platforms_complete_5
-WHERE platform = 'Rightmove'
-ORDER BY price_sqm;
+GROUP BY 2;
 
 
 
+SELECT COUNT(*),
+		platform
+FROM platforms_complete_4
+GROUP BY 2;
+
+
+SELECT COUNT(*),
+		platform
+FROM platforms_complete_3
+GROUP BY 2;
 
 
 
@@ -561,4 +596,31 @@ FROM spotahome_clean;
 SELECT COUNT(*)
 FROM spotahome_clean;
 --835
+
+
+
+
+
+
+SELECT COUNT(*)
+FROM spotahome_clean;
+
+SELECT COUNT(*)
+FROM spotahome_clean_2022_10_11;
+
+
+SELECT COUNT(*),
+		neighbourhood,
+		furniture 
+FROM platforms_complete_5 pc
+GROUP BY 2, 3
+ORDER BY neighbourhood;
+
+
+
+
+
+
+UPDATE capstone_jmrs.spotahome_clean
+SET detailed_furniture = 'furnished';
 
