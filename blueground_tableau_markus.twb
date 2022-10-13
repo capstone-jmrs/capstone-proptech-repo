@@ -10926,8 +10926,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='28' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='27' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='34' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='33' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='13500' id='8' mode='checkdropdown' name='11 price comparison (potential margin)' param='[federated.1daz64g0lmuwff1bi1cic0qiqnd6].[none:price_sqm_band:nk]' type-v2='filter' w='16000' x='83200' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
