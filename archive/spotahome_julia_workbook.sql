@@ -520,6 +520,7 @@ ALTER TABLE platforms_complete_5
 --------------------------------------------------
 --------------------------------------------------
  
+DROP TABLE platforms_complete; 
  
 CREATE TABLE platforms_complete AS
 (SELECT *
@@ -623,4 +624,79 @@ ORDER BY neighbourhood;
 
 UPDATE capstone_jmrs.spotahome_clean
 SET detailed_furniture = 'furnished';
+
+
+
+
+SELECT *
+INTO platforms_complete_pricecut
+FROM platforms_complete;
+
+
+DELETE
+FROM platforms_complete_pricecut
+WHERE detailed_furniture = 'furnished'
+	AND price > '8001';
+
+
+DELETE
+FROM platforms_complete_pricecut
+WHERE detailed_furniture = 'unfurnished'
+	AND price > '6001';
+
+
+SELECT ROUND(AVG(price),2),
+		neighbourhood,
+		furniture
+FROM platforms_complete_pricecut
+GROUP BY 2, 3
+ORDER BY neighbourhood;
+
+
+SELECT*
+FROM platforms_complete pc 
+WHERE neighbourhood='City of Westminster'
+AND furniture='unfurnished'
+ORDER BY price;
+
+
+--------------------------------------------------
+--------------------------------------------------
+
+
+SELECT COUNT(*)
+FROM platforms_complete pc;
+--5096
+
+
+SELECT COUNT(*)
+FROM platforms_complete_pricecut pcp;
+--4651
+
+
+--------------------------------------------------
+--------------------------------------------------
+
+SELECT COUNT(*)
+FROM platforms_complete pc
+WHERE available_from = '2022-10-12'
+	AND furniture='unfurnished';
+--255
+	
+
+SELECT COUNT(*)
+FROM platforms_complete pc
+WHERE available_from >= '2022-10-12' 
+	AND available_from <= '2022-11-12'
+	AND furniture='unfurnished';
+--476
+
+
+SELECT COUNT(*)
+FROM platforms_complete pc
+WHERE available_from <= '2022-11-12' 
+	AND furniture='unfurnished';
+--476
+
+
 
