@@ -200,3 +200,26 @@ SELECT  *
 FROM capstone_jmrs.platforms_complete_4
 WHERE platform = 'Rightmove' AND price_sqm IS NOT NULL 
 ORDER BY price_sqm ASC  ;
+
+----
+SELECT count(*)
+FROM platforms_complete_5 pc 
+
+----
+SELECT count(bedrooms) 
+FROM platforms_complete_5
+WHERE neighbourhood = 'Camden'
+AND furniture = 'unfurnished' ;
+---
+SELECT COUNT(*),
+		neighbourhood,
+		furniture
+FROM platforms_complete_5 pc
+GROUP BY 2, 3
+ORDER BY neighbourhood ;
+
+-----
+
+DELETE
+FROM platforms_complete_4
+WHERE bedrooms IS NULL;
