@@ -223,3 +223,16 @@ ORDER BY neighbourhood ;
 DELETE
 FROM platforms_complete_4
 WHERE bedrooms IS NULL;
+
+----
+SELECT *
+FROM capstone_jmrs.platforms_complete AS pc 
+WHERE pc.furniture = 'unfurnished'
+AND pc.platform = 'Rightmove'
+AND pc.neighbourhood = 'City of Westminster' ;
+-----
+SELECT *
+FROM capstone_jmrs.platforms_complete AS pc 
+WHERE pc.furniture = 'furnished'
+AND (pc.platform = 'Blueground' or pc.platform = 'Spotahome')
+AND pc.neighbourhood = 'City of Westminster' ;
