@@ -705,5 +705,26 @@ WHERE available_from <= '2022-11-12'
 --------------------------------------------------
 --------------------------------------------------
 --------------------------------------------------
+SELECT COUNT(*)
+FROM spotahome_clean;
+--833
 
+
+SELECT COUNT(*)
+FROM blueground_clean;
+--74
+
+SELECT COUNT(*)
+FROM rightmove_clean;
+--4189
+
+SELECT COUNT(*)
+FROM platforms_complete;
+--5082
+
+
+SELECT COUNT(*),
+		property_type
+FROM rightmove_clean rc 
+GROUP BY 2;
 
