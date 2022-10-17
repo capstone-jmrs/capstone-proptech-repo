@@ -1,71 +1,36 @@
-﻿neighbourhood,lat,long,Area Code,Area Name
-Camden,51.53908884,-0.1441735,E09000001,City of London
-City of London,51.51333746,-0.09043991,E09000002,Barking and Dagenham
-City of Westminster,51.49799396,-0.137879227,E09000003,Barnet
-Hackney,51.54412109,-0.053815689,E09000004,Bexley
-Hammersmith,51.49133656,-0.220245547,E09000005,Brent
-Fulham,51.47780678,-0.200519976,E09000006,Bromley
-Islington,51.53915349,-0.101154443,E09000007,Camden
-Kensington,51.50109093,-0.190377279,E09000008,Croydon
-Chelsea,51.48759847,-0.170502803,E09000009,Ealing
-Lambeth,51.49418442,-0.118473037,E09000010,Enfield
-Tower Hamlets,51.50553311,-0.019871258,E09000011,Greenwich
-,,,E09000012,Hackney
-,,,E09000013,Hammersmith and Fulham
-,,,E09000014,Haringey
-,,,E09000015,Harrow
-,,,E09000016,Havering
-,,,E09000017,Hillingdon
-,,,E09000018,Hounslow
-,,,E09000019,Islington
-,,,E09000020,Kensington and Chelsea
-,,,E09000021,Kingston upon Thames
-,,,E09000022,Lambeth
-,,,E09000023,Lewisham
-,,,E09000024,Merton
-,,,E09000025,Newham
-,,,E09000026,Redbridge
-,,,E09000027,Richmond upon Thames
-,,,E09000028,Southwark
-,,,E09000029,Sutton
-,,,E09000030,Tower Hamlets
-,,,E09000031,Waltham Forest
-,,,E09000032,Wandsworth
-,,,E09000033,Westminster
-,,,E09000001,City of London
-,,,E09000002,Barking and Dagenham
-,,,E09000003,Barnet
-,,,E09000004,Bexley
-,,,E09000005,Brent
-,,,E09000006,Bromley
-,,,E09000007,Camden
-,,,E09000008,Croydon
-,,,E09000009,Ealing
-,,,E09000010,Enfield
-,,,E09000011,Greenwich
-,,,E09000012,Hackney
-,,,E09000013,Hammersmith and Fulham
-,,,E09000014,Haringey
-,,,E09000015,Harrow
-,,,E09000016,Havering
-,,,E09000017,Hillingdon
-,,,E09000018,Hounslow
-,,,E09000019,Islington
-,,,E09000020,Kensington and Chelsea
-,,,E09000021,Kingston upon Thames
-,,,E09000022,Lambeth
-,,,E09000023,Lewisham
-,,,E09000024,Merton
-,,,E09000025,Newham
-,,,E09000026,Redbridge
-,,,E09000027,Richmond upon Thames
-,,,E09000028,Southwark
-,,,E09000029,Sutton
-,,,E09000030,Tower Hamlets
-,,,E09000031,Waltham Forest
-,,,E09000032,Wandsworth
-,,,E09000033,Westminster
-,,,E12000007,London region
-,,,E12000007,London region
-,,,E92000001,England
-,,,E92000001,England
+﻿Area Code,Area Name
+E09000001,City of London
+E09000002,Barking and Dagenham
+E09000003,Barnet
+E09000004,Bexley
+E09000005,Brent
+E09000006,Bromley
+E09000007,Camden
+E09000008,Croydon
+E09000009,Ealing
+E09000010,Enfield
+E09000011,Greenwich
+E09000012,Hackney
+E09000013,Hammersmith and Fulham
+E09000014,Haringey
+E09000015,Harrow
+E09000016,Havering
+E09000017,Hillingdon
+E09000018,Hounslow
+E09000019,Islington
+E09000020,Kensington and Chelsea
+E09000021,Kingston upon Thames
+E09000022,Lambeth
+E09000023,Lewisham
+E09000024,Merton
+E09000025,Newham
+E09000026,Redbridge
+E09000027,Richmond upon Thames
+E09000028,Southwark
+E09000029,Sutton
+E09000030,Tower Hamlets
+E09000031,Waltham Forest
+E09000032,Wandsworth
+E09000033,Westminster
+E12000007,London region
+E92000001,England
