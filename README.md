@@ -3,7 +3,7 @@ Capstone project for the data analytics bootcamp at [neuefische](https://www.neu
 
 ## Overview
 
-Ukio is a spain based company that’s on the mission to empower individuals to live where they want and when they want. As a product, they offer fully furnished premium apartments in prime locations within major metropolitan cities. One major European city Ukio has taken into focus as one of their possible next stops is London.
+Proptech company Ukio is a spain based company that’s on the mission to empower individuals to live where they want and when they want. As a product, they offer fully furnished premium apartments in prime locations within major metropolitan cities. One major European city Ukio has taken into focus as one of their possible next stops is London.
 
 ## Scope
 Ukio delivered nine prime neighbourhoods in London and three different platforms which are our data sources. 
