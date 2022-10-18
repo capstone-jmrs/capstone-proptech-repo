@@ -1,4 +1,4 @@
-# Market and location analysis for Ukio
+# Market and location analysis for a proptech company
 Capstone project for the data analytics bootcamp at [neuefische](https://www.neuefische.de/). This project was developed in four weeks during September and October 2022 by Ruben Prinz ([Github](https://github.com/burned-py)), Julia Rupp ([Linkedin](https://www.linkedin.com/in/juliarupp1987/), [Github](https://github.com/juliarupp)) and Markus Steinke ([Linkedin](https://www.linkedin.com/in/markus-steinke001/), [Github](https://github.com/neovegeto)).
 
 ## Overview
