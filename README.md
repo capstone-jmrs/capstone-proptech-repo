@@ -6,7 +6,7 @@ Capstone project for the data analytics bootcamp at [neuefische](https://www.neu
 Proptech company Ukio is a spain based company that’s on the mission to empower individuals to live where they want and when they want. As a product, they offer fully furnished premium apartments in prime locations within major metropolitan cities. One major European city Ukio has taken into focus as one of their possible next stops is London.
 
 ## Scope
-Ukio delivered nine prime neighbourhoods in London and three different platforms which are our data sources. 
+Ukio delivered nine prime neighbourhoods in London which are possible targets and three different platforms which are our data sources. 
 
 #### Neighbourhoods:
 - Camden
@@ -40,7 +40,8 @@ Our main focus was information about the rental offers:
 ## Notebooks
 Every platform works different so the goal was to have one notebook for each platform that performs the scraping with python, cleaning with python and sql and analysis with one run.
 - Blueground: name.ipynb
-- Spotahome: name.ipynb
+- Spotahome: spotahome.ipynb
 - Rightmove: name.ipynb
 
-After that the tables are combined and provided for the visualization with tableau: platforms_complete.twb
+After that the tables are combined and provided for the visualization with tableau.
+- platforms_complete.twb
