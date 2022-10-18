@@ -236,3 +236,11 @@ FROM capstone_jmrs.platforms_complete AS pc
 WHERE pc.furniture = 'furnished'
 AND (pc.platform = 'Blueground' or pc.platform = 'Spotahome')
 AND pc.neighbourhood = 'City of Westminster' ;
+
+----
+CREATE TABLE london_long AS 
+SELECT
+"Area Name"
+"Area Code"
+FROM
+    capstone_jmrs.london_boroughs ;
