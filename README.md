@@ -16,7 +16,7 @@ Ukio delivered nine prime neighbourhoods in London which are possible targets an
 - Hammersmith and Fulham
 - Islington
 - Kensington and Chelsea
-- Lambrth
+- Lambeth
 - Tower Hamlets
 
 #### Data sources:
