@@ -39,9 +39,9 @@ Our main focus was information about the rental offers:
 
 ## Notebooks
 Every platform works different so the goal was to have one notebook for each platform that performs the scraping with python, cleaning with python and sql and analysis with one run.
-- Blueground: name.ipynb
+- Blueground: blueground.ipynb
 - Spotahome: spotahome.ipynb
-- Rightmove: name.ipynb
+- Rightmove: rightmove_new.ipynb
 
 After that the tables are combined and provided for the visualization with tableau.
 - platforms_complete.twb
