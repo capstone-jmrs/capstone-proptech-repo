@@ -28,7 +28,7 @@ Ukio delivered nine prime neighbourhoods in London which are possible targets an
 The goal was to explore the question: Should Ukio go to London?
 
 ## Data
-Since there is no available data to download or APIs to use for our case, we scraped the data from the platforms ourself.
+Since there is no available data to download or APIs to use for our case, we scraped the data from the platforms ourselves.
 For this we wrote python code using the python package BeautifulSoup.
 Our main focus was information about the rental offers:
 - the property type e.g. Studios and Apartments
