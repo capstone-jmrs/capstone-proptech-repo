@@ -26,6 +26,8 @@ Ukio delivered nine prime neighbourhoods in London which are possible targets an
 
 ## Goal 
 The goal was to explore the question: Should Ukio go to London?
+To answer the question we provided Ukio with data about funished and unfurnished studios and apartments. Most important were the prices, the square meter sizes and the occupancy rate.
+With our data we provide positive indicators for London. With the Data Ukio will receive from us, and with their knowledge on previous market entrances, they will know which steps to take next.
 
 ## Data
 Since there is no available data to download or APIs to use for our case, we scraped the data from the platforms ourselves.
@@ -41,7 +43,7 @@ Our main focus was information about the rental offers:
 Every platform works different so the goal was to have one notebook for each platform that performs the scraping with python, cleaning with python and sql and analysis with one run.
 - Blueground: blueground.ipynb
 - Spotahome: spotahome.ipynb
-- Rightmove: rightmove_new.ipynb
+- Rightmove: rightmove.ipynb
 
 After that the tables are combined and provided for the visualization with tableau.
 - platforms_complete.twb
