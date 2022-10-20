@@ -2441,1252 +2441,6 @@
         </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' inline='true' name='federated.06w5dss19qpefz1enmgrq1uedxvs' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='data-analytics-course.c8g8r1deus2v.eu-central-1.rds.amazonaws.com' name='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6'>
-            <connection authentication='username-password' class='postgres' dbname='postgres' one-time-sql='' port='5432' server='data-analytics-course.c8g8r1deus2v.eu-central-1.rds.amazonaws.com' username='juliarupp' />
-          </named-connection>
-          <named-connection caption='London_Borough_Boundaries' name='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2'>
-            <connection class='ogrdirect' directory='/Users/julia/neuefische/capstone-proptech-rep/platforms_complete.twb Files/Data/London_Borough_Boundaries' filename='London_Borough_Boundaries.shp' password='' server='' tablename='' />
-          </named-connection>
-        </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2' name='London_Borough_Boundaries.shp' table='[London_Borough_Boundaries.shp]' type='table'>
-          <columns>
-            <column datatype='integer' name='OBJECTID' ordinal='0' />
-            <column datatype='string' name='BOROUGH' ordinal='1' />
-            <column datatype='string' name='NUMBER_' ordinal='2' />
-            <column datatype='string' name='FILE_NAME' ordinal='3' />
-            <column datatype='string' name='CODE' ordinal='4' />
-            <column datatype='real' name='HECTARES' ordinal='5' />
-            <column datatype='integer' name='AREA' ordinal='6' />
-            <column datatype='string' name='DESCRIPT0' ordinal='7' />
-            <column datatype='integer' name='X' ordinal='8' />
-            <column datatype='integer' name='Y' ordinal='9' />
-            <column datatype='string' name='SE_ANNO_CA' ordinal='10' />
-            <column datatype='real' name='SHAPE__Are' ordinal='11' />
-            <column datatype='real' name='SHAPE__Len' ordinal='12' />
-            <column datatype='spatial' name='Geometry' ordinal='13' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
-          <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
-          <relation connection='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2' name='London_Borough_Boundaries.shp' table='[London_Borough_Boundaries.shp]' type='table'>
-            <columns>
-              <column datatype='integer' name='OBJECTID' ordinal='0' />
-              <column datatype='string' name='BOROUGH' ordinal='1' />
-              <column datatype='string' name='NUMBER_' ordinal='2' />
-              <column datatype='string' name='FILE_NAME' ordinal='3' />
-              <column datatype='string' name='CODE' ordinal='4' />
-              <column datatype='real' name='HECTARES' ordinal='5' />
-              <column datatype='integer' name='AREA' ordinal='6' />
-              <column datatype='string' name='DESCRIPT0' ordinal='7' />
-              <column datatype='integer' name='X' ordinal='8' />
-              <column datatype='integer' name='Y' ordinal='9' />
-              <column datatype='string' name='SE_ANNO_CA' ordinal='10' />
-              <column datatype='real' name='SHAPE__Are' ordinal='11' />
-              <column datatype='real' name='SHAPE__Len' ordinal='12' />
-              <column datatype='spatial' name='Geometry' ordinal='13' />
-            </columns>
-          </relation>
-        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>platform_id</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[platform_id]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>platform_id</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>platform</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[platform]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>platform</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>neighbourhood</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[neighbourhood]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>neighbourhood</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>furniture</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[furniture]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>furniture</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>property_type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[property_type]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>property_type</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>size_sqm</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[size_sqm]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>size_sqm</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>bedrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[bedrooms]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>bedrooms</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>bathrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[bathrooms]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>bathrooms</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>price</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[price]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>price</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>price_sqm</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[price_sqm]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>price_sqm</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>price_bedroom</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[price_bedroom]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>price_bedroom</remote-alias>
-            <ordinal>11</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>available_from</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[available_from]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>available_from</remote-alias>
-            <ordinal>12</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>available_today</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[available_today]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>available_today</remote-alias>
-            <ordinal>13</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>let_type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[let_type]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>let_type</remote-alias>
-            <ordinal>14</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>detailed_furniture</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[detailed_furniture]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>detailed_furniture</remote-alias>
-            <ordinal>15</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>scraping_date</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[scraping_date]</local-name>
-            <parent-name>[platforms_complete]</parent-name>
-            <remote-alias>scraping_date</remote-alias>
-            <ordinal>16</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>OBJECTID</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[OBJECTID]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>OBJECTID</remote-alias>
-            <ordinal>17</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>BOROUGH</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[BOROUGH]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>BOROUGH</remote-alias>
-            <ordinal>18</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>NUMBER_</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[NUMBER_]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>NUMBER_</remote-alias>
-            <ordinal>19</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>FILE_NAME</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[FILE_NAME]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>FILE_NAME</remote-alias>
-            <ordinal>20</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>CODE</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[CODE]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>CODE</remote-alias>
-            <ordinal>21</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>HECTARES</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[HECTARES]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>HECTARES</remote-alias>
-            <ordinal>22</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>AREA</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[AREA]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>AREA</remote-alias>
-            <ordinal>23</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>DESCRIPT0</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[DESCRIPT0]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>DESCRIPT0</remote-alias>
-            <ordinal>24</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>X</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[X]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>X</remote-alias>
-            <ordinal>25</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Y</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Y]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>Y</remote-alias>
-            <ordinal>26</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>SE_ANNO_CA</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[SE_ANNO_CA]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>SE_ANNO_CA</remote-alias>
-            <ordinal>27</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='binary' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>SHAPE__Are</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[SHAPE__Are]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>SHAPE__Are</remote-alias>
-            <ordinal>28</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>SHAPE__Len</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[SHAPE__Len]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>SHAPE__Len</remote-alias>
-            <ordinal>29</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Geometry</remote-name>
-            <remote-type>8</remote-type>
-            <local-name>[Geometry]</local-name>
-            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
-            <remote-alias>Geometry</remote-alias>
-            <ordinal>30</ordinal>
-            <local-type>spatial</local-type>
-            <aggregation>Collect</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column caption='Area' datatype='integer' name='[AREA]' role='measure' type='quantitative' />
-      <column caption='Borough' datatype='string' name='[BOROUGH]' role='dimension' type='nominal'>
-        <aliases>
-          <alias key='&quot;Hammersmith &amp; Fulham&quot;' value='Hammersmith and Fulham' />
-          <alias key='&quot;Kensington &amp; Chelsea&quot;' value='Kensington and Chelsea' />
-          <alias key='&quot;Westminster&quot;' value='City of Westminster' />
-        </aliases>
-      </column>
-      <column caption='Bedrooms Dim' datatype='string' datatype-customized='true' default-role='measure' default-type='ordinal' name='[Bedrooms (copy)_4969722205270302720]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='STR([bedrooms])' />
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 1]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
-            <value>&quot;1&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
-            <value>&quot;2&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
-            <value>&quot;3&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;Studio&quot;'>
-            <value>&quot;0&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 2]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
-            <value>&quot;1&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
-            <value>&quot;2&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
-            <value>&quot;3&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;Studio&quot;'>
-            <value>&quot;0&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 3]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;4+&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 4]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
-            <value>&quot;1&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
-            <value>&quot;2&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
-            <value>&quot;3&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;Studio&quot;'>
-            <value>&quot;0&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 5]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;4+&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 6]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
-            <value>&quot;1&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
-            <value>&quot;2&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
-            <value>&quot;3&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;Studio&quot;'>
-            <value>&quot;0&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 7]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
-            <value>&quot;1&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
-            <value>&quot;2&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
-            <value>&quot;3&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;Studio&quot;'>
-            <value>&quot;0&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group) 8]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
-            <value>&quot;1&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
-            <value>&quot;2&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
-            <value>&quot;3&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;4+&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-          <bin default-name='false' value='&quot;Studio&quot;'>
-            <value>&quot;0&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column datatype='string' name='[Bedrooms Dim (group)]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
-          <bin default-name='false' value='&quot;4+&quot;'>
-            <value>&quot;4&quot;</value>
-            <value>&quot;5&quot;</value>
-            <value>&quot;6&quot;</value>
-          </bin>
-        </calculation>
-      </column>
-      <column caption='Code' datatype='string' name='[CODE]' role='dimension' type='nominal' />
-      <column caption='Occupancy rate 30 days' datatype='string' name='[Calculation_1015491366504726528]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='IF [available_from] &lt; #2022-11-12# THEN &apos;available&apos;&#10;ELSE &apos;occupied&apos;&#10;END' />
-      </column>
-      <column caption='Occupancy Rate with bedrooms' datatype='string' name='[Calculation_1015491366567194626]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='[available_today] + STR([bedrooms])' />
-      </column>
-      <column caption='Price_SQM_Furnished' datatype='real' name='[Calculation_117163980447125511]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF [furniture] = &quot;furnished&quot; then [price_sqm]&#10;ELSE NULL&#10;END' />
-      </column>
-      <column caption='Price_SQM_Difference' datatype='real' name='[Calculation_117163980447469577]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='AVG( [Calculation_117163980447125511] - [SQM_Furnished (copy)_117163980447342600])' />
-      </column>
-      <column caption='Index' datatype='integer' name='[Calculation_173036762971086848]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='INDEX()'>
-          <table-calc ordering-type='Rows' />
-        </calculation>
-      </column>
-      <column caption='Targeted Groups KPI 10/11' datatype='string' name='[Calculation_2123095397813891074]' role='dimension' type='nominal'>
-        <calculation class='tableau' formula='IF [platform] = &apos;Rightmove&apos; AND [furniture] = &apos;unfurnished&apos; THEN &apos;Rightmove unfurnished&apos;&#10;ELSEIF [platform] = &apos;Blueground&apos; OR [platform] = &apos;Spotahome&apos; THEN &apos;Spotahome &amp; Blueground&apos;&#10;ELSE &apos;Rightmove furnished&apos;&#10;END' />
-      </column>
-      <column caption='Descript0' datatype='string' name='[DESCRIPT0]' role='dimension' type='nominal' />
-      <column caption='File Name' datatype='string' name='[FILE_NAME]' role='dimension' type='nominal' />
-      <column caption='Hectares' datatype='real' name='[HECTARES]' role='measure' type='quantitative' />
-      <column caption='Number' datatype='string' name='[NUMBER_]' role='dimension' type='nominal' />
-      <column caption='Objectid' datatype='integer' name='[OBJECTID]' role='measure' type='quantitative' />
-      <column caption='Se Anno Ca' datatype='string' name='[SE_ANNO_CA]' role='dimension' type='nominal' />
-      <column caption='Price_SQM_unfurnished' datatype='real' name='[SQM_Furnished (copy)_117163980447342600]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='IF [furniture] = &quot;unfurnished&quot; then [price_sqm]&#10;ELSE NULL&#10;END' />
-      </column>
-      <column aggregation='None' datatype='integer' name='[Size Sqm (bin)]' role='dimension' type='quantitative'>
-        <calculation class='bin' decimals='1' formula='[size_sqm]' peg='0' size='91' />
-      </column>
-      <_.fcp.ObjectModelTableType.true...column caption='London_Borough_Boundaries.shp' datatype='table' name='[__tableau_internal_object_id__].[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='platforms_complete' datatype='table' name='[__tableau_internal_object_id__].[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]' role='measure' type='quantitative' />
-      <column caption='Available From' datatype='date' name='[available_from]' role='dimension' type='ordinal' />
-      <column caption='Available Today' datatype='string' name='[available_today]' role='dimension' type='nominal' />
-      <column caption='Bathrooms' datatype='real' name='[bathrooms]' role='measure' type='quantitative' />
-      <column caption='Bedrooms' datatype='real' default-format='n#,##0&quot; beds&quot;;-#,##0&quot; beds&quot;' name='[bedrooms]' role='measure' type='quantitative' />
-      <column caption='Detailed Furniture' datatype='string' name='[detailed_furniture]' role='dimension' type='nominal' />
-      <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
-      <column caption='Let Type' datatype='string' name='[let_type]' role='dimension' type='nominal' />
-      <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
-      <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
-      <column caption='Platform Id' datatype='string' name='[platform_id]' role='dimension' type='nominal' />
-      <column caption='Price' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price]' role='measure' type='quantitative' />
-      <column caption='Price Bedroom' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price_bedroom]' role='measure' type='quantitative' />
-      <column caption='Price Sqm' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price_sqm]' role='measure' type='quantitative' />
-      <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
-      <column caption='Scraping Date' datatype='date' name='[scraping_date]' role='dimension' type='ordinal' />
-      <column caption='Size Sqm' datatype='real' default-format='n#,##0&quot; m²&quot;;-#,##0&quot; m²&quot;' name='[size_sqm]' role='measure' type='quantitative' />
-      <column-instance column='[Bedrooms (copy)_4969722205270302720]' derivation='Attribute' name='[attr:Bedrooms (copy)_4969722205270302720:nk]' pivot='key' type='nominal' />
-      <column-instance column='[Bedrooms (copy)_4969722205270302720]' derivation='None' name='[none:Bedrooms (copy)_4969722205270302720:nk]' pivot='key' type='nominal' />
-      <column-instance column='[Calculation_1015491366504726528]' derivation='None' name='[none:Calculation_1015491366504726528:nk]' pivot='key' type='nominal' />
-      <column-instance column='[available_today]' derivation='None' name='[none:available_today:nk]' pivot='key' type='nominal' />
-      <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
-      <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
-      <group caption='Targeted Neighbourhoods' name='[Targeted Neighbourhoods]' name-style='unqualified' user:ui-builder='filter-group'>
-        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Camden&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;City of London&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Hackney&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Hammersmith &amp; Fulham&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Islington&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Kensington &amp; Chelsea&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Lambeth&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Tower Hamlets&quot;' />
-          <groupfilter function='member' level='[BOROUGH]' member='&quot;Westminster&quot;' />
-        </groupfilter>
-      </group>
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
-      <style>
-        <style-rule element='mark'>
-          <encoding attr='color' field='[Bedrooms Dim (group) 5]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;0&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[none:neighbourhood:nk]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;Camden&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;Hammersmith and Fulham&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;Hackney&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;Tower Hamlets&quot;</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>&quot;Kensington and Chelsea&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;City of Westminster&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;Islington&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;City of London&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;Lambeth&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[none:available_today:nk]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;available&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;occupied&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[none:Bedrooms (copy)_4969722205270302720:nk]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;2&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>&quot;0&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;1&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group) 4]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;Studio&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group)]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;0&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group) 1]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;Studio&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[none:Calculation_1015491366504726528:nk]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;available&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;occupied&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group) 2]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;Studio&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group) 3]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;0&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group) 6]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;Studio&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[attr:Bedrooms (copy)_4969722205270302720:nk]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;0&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3&quot;</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>%many-values%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group) 8]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;Studio&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[none:furniture:nk]' palette='tableau10_10_0' type='palette'>
-            <map to='#1f77b4'>
-              <bucket>%all%</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;unfurnished&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;furnished&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[Bedrooms Dim (group) 7]' palette='tableau10_10_0' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;6&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;Studio&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;8&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;10&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;9&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;4&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;5&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;7&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-        </style-rule>
-      </style>
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
-      </semantic-values>
-      <date-options start-of-week='monday' />
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='London_Borough_Boundaries.shp' id='London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288'>
-            <properties context=''>
-              <relation connection='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2' name='London_Borough_Boundaries.shp' table='[London_Borough_Boundaries.shp]' type='table'>
-                <columns>
-                  <column datatype='integer' name='OBJECTID' ordinal='0' />
-                  <column datatype='string' name='BOROUGH' ordinal='1' />
-                  <column datatype='string' name='NUMBER_' ordinal='2' />
-                  <column datatype='string' name='FILE_NAME' ordinal='3' />
-                  <column datatype='string' name='CODE' ordinal='4' />
-                  <column datatype='real' name='HECTARES' ordinal='5' />
-                  <column datatype='integer' name='AREA' ordinal='6' />
-                  <column datatype='string' name='DESCRIPT0' ordinal='7' />
-                  <column datatype='integer' name='X' ordinal='8' />
-                  <column datatype='integer' name='Y' ordinal='9' />
-                  <column datatype='string' name='SE_ANNO_CA' ordinal='10' />
-                  <column datatype='real' name='SHAPE__Are' ordinal='11' />
-                  <column datatype='real' name='SHAPE__Len' ordinal='12' />
-                  <column datatype='spatial' name='Geometry' ordinal='13' />
-                </columns>
-              </relation>
-            </properties>
-          </object>
-          <object caption='platforms_complete' id='platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA'>
-            <properties context=''>
-              <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
-            </properties>
-          </object>
-        </objects>
-        <relationships>
-          <relationship>
-            <expression op='='>
-              <expression op='[neighbourhood]' />
-              <expression _.fcp.RelationshipCalculations.false...op='[IF BOROUGH = &quot;Westminster&quot; THEN &quot;City of Westminster&quot; &#10;ELSEIF  BOROUGH = &quot;Kensington &amp; Chelsea&quot; THEN &quot;Kensington and Chelsea&quot;&#10;ELSEIF BOROUGH = &quot;Hammersmith &amp; Fulham&quot; THEN &quot;Hammersmith and Fulham&quot;&#10;ELSE BOROUGH&#10;END]' _.fcp.RelationshipCalculations.true...op='IF [BOROUGH] = &quot;Westminster&quot; THEN &quot;City of Westminster&quot; &#10;ELSEIF  [BOROUGH] = &quot;Kensington &amp; Chelsea&quot; THEN &quot;Kensington and Chelsea&quot;&#10;ELSEIF [BOROUGH] = &quot;Hammersmith &amp; Fulham&quot; THEN &quot;Hammersmith and Fulham&quot;&#10;ELSE [BOROUGH]&#10;END' />
-            </expression>
-            <first-end-point object-id='platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA' />
-            <second-end-point object-id='London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288' />
-          </relationship>
-        </relationships>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
     <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres) (2)' inline='true' name='federated.06w5dss19qpefz1enmgrq1uedxvs (copy)' version='18.1'>
       <connection class='federated'>
         <named-connections>
@@ -4868,6 +3622,1850 @@
           <object caption='platforms_complete' id='platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA'>
             <properties context=''>
               <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6 (copy 2)' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[neighbourhood]' />
+              <expression op='[neighbourhood (geodata)]' />
+            </expression>
+            <first-end-point object-id='platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA' />
+            <second-end-point object-id='geodata (capstone_jmrs.geodata)_9DCB4CAB2536491F99683D1D5D56CCDE' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres)' inline='true' name='federated.06w5dss19qpefz1enmgrq1uedxvs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data-analytics-course.c8g8r1deus2v.eu-central-1.rds.amazonaws.com' name='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6'>
+            <connection authentication='username-password' class='postgres' dbname='postgres' one-time-sql='' port='5432' server='data-analytics-course.c8g8r1deus2v.eu-central-1.rds.amazonaws.com' username='juliarupp' />
+          </named-connection>
+          <named-connection caption='London_Borough_Boundaries' name='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2'>
+            <connection class='ogrdirect' directory='/Users/julia/neuefische/capstone-proptech-rep/platforms_complete.twb Files/Data/London_Borough_Boundaries' filename='London_Borough_Boundaries.shp' password='' server='' tablename='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2' name='London_Borough_Boundaries.shp' table='[London_Borough_Boundaries.shp]' type='table'>
+          <columns>
+            <column datatype='integer' name='OBJECTID' ordinal='0' />
+            <column datatype='string' name='BOROUGH' ordinal='1' />
+            <column datatype='string' name='NUMBER_' ordinal='2' />
+            <column datatype='string' name='FILE_NAME' ordinal='3' />
+            <column datatype='string' name='CODE' ordinal='4' />
+            <column datatype='real' name='HECTARES' ordinal='5' />
+            <column datatype='integer' name='AREA' ordinal='6' />
+            <column datatype='string' name='DESCRIPT0' ordinal='7' />
+            <column datatype='integer' name='X' ordinal='8' />
+            <column datatype='integer' name='Y' ordinal='9' />
+            <column datatype='string' name='SE_ANNO_CA' ordinal='10' />
+            <column datatype='real' name='SHAPE__Are' ordinal='11' />
+            <column datatype='real' name='SHAPE__Len' ordinal='12' />
+            <column datatype='spatial' name='Geometry' ordinal='13' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
+          <relation connection='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2' name='London_Borough_Boundaries.shp' table='[London_Borough_Boundaries.shp]' type='table'>
+            <columns>
+              <column datatype='integer' name='OBJECTID' ordinal='0' />
+              <column datatype='string' name='BOROUGH' ordinal='1' />
+              <column datatype='string' name='NUMBER_' ordinal='2' />
+              <column datatype='string' name='FILE_NAME' ordinal='3' />
+              <column datatype='string' name='CODE' ordinal='4' />
+              <column datatype='real' name='HECTARES' ordinal='5' />
+              <column datatype='integer' name='AREA' ordinal='6' />
+              <column datatype='string' name='DESCRIPT0' ordinal='7' />
+              <column datatype='integer' name='X' ordinal='8' />
+              <column datatype='integer' name='Y' ordinal='9' />
+              <column datatype='string' name='SE_ANNO_CA' ordinal='10' />
+              <column datatype='real' name='SHAPE__Are' ordinal='11' />
+              <column datatype='real' name='SHAPE__Len' ordinal='12' />
+              <column datatype='spatial' name='Geometry' ordinal='13' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>platform_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[platform_id]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>platform_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>platform</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[platform]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>platform</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>neighbourhood</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>furniture</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[furniture]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>furniture</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>property_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[property_type]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>property_type</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>size_sqm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[size_sqm]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>size_sqm</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bedrooms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bedrooms]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>bedrooms</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bathrooms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bathrooms]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>bathrooms</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_sqm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_sqm]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>price_sqm</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_bedroom</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_bedroom]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>price_bedroom</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>available_from</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[available_from]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>available_from</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>available_today</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[available_today]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>available_today</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>let_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[let_type]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>let_type</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>detailed_furniture</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[detailed_furniture]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>detailed_furniture</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scraping_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[scraping_date]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>scraping_date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OBJECTID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OBJECTID]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>OBJECTID</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BOROUGH</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BOROUGH]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>BOROUGH</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NUMBER_</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NUMBER_]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>NUMBER_</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FILE_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FILE_NAME]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>FILE_NAME</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CODE]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>CODE</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HECTARES</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[HECTARES]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>HECTARES</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AREA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AREA]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>AREA</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DESCRIPT0</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DESCRIPT0]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>DESCRIPT0</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[X]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>X</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Y]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>Y</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SE_ANNO_CA</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SE_ANNO_CA]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>SE_ANNO_CA</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SHAPE__Are</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SHAPE__Are]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>SHAPE__Are</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SHAPE__Len</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SHAPE__Len]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>SHAPE__Len</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>8</remote-type>
+            <local-name>[Geometry]</local-name>
+            <parent-name>[London_Borough_Boundaries.shp]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>spatial</local-type>
+            <aggregation>Collect</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Area' datatype='integer' name='[AREA]' role='measure' type='quantitative' />
+      <column caption='Borough' datatype='string' name='[BOROUGH]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Hammersmith &amp; Fulham&quot;' value='Hammersmith and Fulham' />
+          <alias key='&quot;Kensington &amp; Chelsea&quot;' value='Kensington and Chelsea' />
+          <alias key='&quot;Westminster&quot;' value='City of Westminster' />
+        </aliases>
+      </column>
+      <column caption='Bedrooms Dim' datatype='string' datatype-customized='true' default-role='measure' default-type='ordinal' name='[Bedrooms (copy)_4969722205270302720]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([bedrooms])' />
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 1]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
+            <value>&quot;1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
+            <value>&quot;2&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
+            <value>&quot;3&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Studio&quot;'>
+            <value>&quot;0&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 2]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
+            <value>&quot;1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
+            <value>&quot;2&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
+            <value>&quot;3&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Studio&quot;'>
+            <value>&quot;0&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 3]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;4+&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 4]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
+            <value>&quot;1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
+            <value>&quot;2&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
+            <value>&quot;3&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Studio&quot;'>
+            <value>&quot;0&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 5]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;4+&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 6]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
+            <value>&quot;1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
+            <value>&quot;2&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
+            <value>&quot;3&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Studio&quot;'>
+            <value>&quot;0&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 7]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
+            <value>&quot;1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
+            <value>&quot;2&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
+            <value>&quot;3&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4+ bedroom Apartment&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Studio&quot;'>
+            <value>&quot;0&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group) 8]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;1 bedroom Apartment&quot;'>
+            <value>&quot;1&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;2 bedroom Apartment&quot;'>
+            <value>&quot;2&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;3 bedroom Apartment&quot;'>
+            <value>&quot;3&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;4+&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Studio&quot;'>
+            <value>&quot;0&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Bedrooms Dim (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Bedrooms (copy)_4969722205270302720]' new-bin='true'>
+          <bin default-name='false' value='&quot;4+&quot;'>
+            <value>&quot;4&quot;</value>
+            <value>&quot;5&quot;</value>
+            <value>&quot;6&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Code' datatype='string' name='[CODE]' role='dimension' type='nominal' />
+      <column caption='Occupancy rate 30 days' datatype='string' name='[Calculation_1015491366504726528]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [available_from] &lt; #2022-11-12# THEN &apos;available&apos;&#10;ELSE &apos;occupied&apos;&#10;END' />
+      </column>
+      <column caption='Occupancy Rate with bedrooms' datatype='string' name='[Calculation_1015491366567194626]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[available_today] + STR([bedrooms])' />
+      </column>
+      <column caption='Price_SQM_Furnished' datatype='real' name='[Calculation_117163980447125511]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [furniture] = &quot;furnished&quot; then [price_sqm]&#10;ELSE NULL&#10;END' />
+      </column>
+      <column caption='Price_SQM_Difference' datatype='real' name='[Calculation_117163980447469577]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG( [Calculation_117163980447125511] - [SQM_Furnished (copy)_117163980447342600])' />
+      </column>
+      <column caption='Index' datatype='integer' name='[Calculation_173036762971086848]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Targeted Groups KPI 10/11' datatype='string' name='[Calculation_2123095397813891074]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [platform] = &apos;Rightmove&apos; AND [furniture] = &apos;unfurnished&apos; THEN &apos;Rightmove unfurnished&apos;&#10;ELSEIF [platform] = &apos;Blueground&apos; OR [platform] = &apos;Spotahome&apos; THEN &apos;Spotahome &amp; Blueground&apos;&#10;ELSE &apos;Rightmove furnished&apos;&#10;END' />
+      </column>
+      <column caption='Descript0' datatype='string' name='[DESCRIPT0]' role='dimension' type='nominal' />
+      <column caption='File Name' datatype='string' name='[FILE_NAME]' role='dimension' type='nominal' />
+      <column caption='Hectares' datatype='real' name='[HECTARES]' role='measure' type='quantitative' />
+      <column caption='Number' datatype='string' name='[NUMBER_]' role='dimension' type='nominal' />
+      <column caption='Objectid' datatype='integer' name='[OBJECTID]' role='measure' type='quantitative' />
+      <column caption='Se Anno Ca' datatype='string' name='[SE_ANNO_CA]' role='dimension' type='nominal' />
+      <column caption='Price_SQM_unfurnished' datatype='real' name='[SQM_Furnished (copy)_117163980447342600]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [furniture] = &quot;unfurnished&quot; then [price_sqm]&#10;ELSE NULL&#10;END' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Size Sqm (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='1' formula='[size_sqm]' peg='0' size='91' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='London_Borough_Boundaries.shp' datatype='table' name='[__tableau_internal_object_id__].[London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='platforms_complete' datatype='table' name='[__tableau_internal_object_id__].[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]' role='measure' type='quantitative' />
+      <column caption='Available From' datatype='date' name='[available_from]' role='dimension' type='ordinal' />
+      <column caption='Available Today' datatype='string' name='[available_today]' role='dimension' type='nominal' />
+      <column caption='Bathrooms' datatype='real' name='[bathrooms]' role='measure' type='quantitative' />
+      <column caption='Bedrooms' datatype='real' default-format='n#,##0&quot; beds&quot;;-#,##0&quot; beds&quot;' name='[bedrooms]' role='measure' type='quantitative' />
+      <column caption='Detailed Furniture' datatype='string' name='[detailed_furniture]' role='dimension' type='nominal' />
+      <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
+      <column caption='Let Type' datatype='string' name='[let_type]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+      <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
+      <column caption='Platform Id' datatype='string' name='[platform_id]' role='dimension' type='nominal' />
+      <column caption='Price' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price]' role='measure' type='quantitative' />
+      <column caption='Price Bedroom' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price_bedroom]' role='measure' type='quantitative' />
+      <column caption='Price Sqm' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price_sqm]' role='measure' type='quantitative' />
+      <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+      <column caption='Scraping Date' datatype='date' name='[scraping_date]' role='dimension' type='ordinal' />
+      <column caption='Size Sqm' datatype='real' default-format='n#,##0&quot; m²&quot;;-#,##0&quot; m²&quot;' name='[size_sqm]' role='measure' type='quantitative' />
+      <column-instance column='[Bedrooms (copy)_4969722205270302720]' derivation='Attribute' name='[attr:Bedrooms (copy)_4969722205270302720:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Bedrooms (copy)_4969722205270302720]' derivation='None' name='[none:Bedrooms (copy)_4969722205270302720:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1015491366504726528]' derivation='None' name='[none:Calculation_1015491366504726528:nk]' pivot='key' type='nominal' />
+      <column-instance column='[available_today]' derivation='None' name='[none:available_today:nk]' pivot='key' type='nominal' />
+      <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
+      <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+      <group caption='Targeted Neighbourhoods' name='[Targeted Neighbourhoods]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Camden&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;City of London&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Hackney&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Hammersmith &amp; Fulham&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Islington&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Kensington &amp; Chelsea&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Lambeth&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Tower Hamlets&quot;' />
+          <groupfilter function='member' level='[BOROUGH]' member='&quot;Westminster&quot;' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Bedrooms Dim (group) 5]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:neighbourhood:nk]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Camden&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Hammersmith and Fulham&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Hackney&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Tower Hamlets&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kensington and Chelsea&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;City of Westminster&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Islington&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;City of London&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Lambeth&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:available_today:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;available&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;occupied&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Bedrooms (copy)_4969722205270302720:nk]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group) 4]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group)]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group) 1]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1015491366504726528:nk]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;available&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;occupied&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group) 2]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group) 3]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group) 6]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Bedrooms (copy)_4969722205270302720:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>%many-values%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:furniture:nk]' palette='tableau10_10_0' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>%all%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;unfurnished&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;furnished&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group) 7]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+ bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Bedrooms Dim (group) 8]' palette='tableau10_10_0' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Studio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4+&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1 bedroom Apartment&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='London_Borough_Boundaries.shp' id='London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288'>
+            <properties context=''>
+              <relation connection='ogrdirect.1ytb15f0ce84kc0zvgxax19us7z2' name='London_Borough_Boundaries.shp' table='[London_Borough_Boundaries.shp]' type='table'>
+                <columns>
+                  <column datatype='integer' name='OBJECTID' ordinal='0' />
+                  <column datatype='string' name='BOROUGH' ordinal='1' />
+                  <column datatype='string' name='NUMBER_' ordinal='2' />
+                  <column datatype='string' name='FILE_NAME' ordinal='3' />
+                  <column datatype='string' name='CODE' ordinal='4' />
+                  <column datatype='real' name='HECTARES' ordinal='5' />
+                  <column datatype='integer' name='AREA' ordinal='6' />
+                  <column datatype='string' name='DESCRIPT0' ordinal='7' />
+                  <column datatype='integer' name='X' ordinal='8' />
+                  <column datatype='integer' name='Y' ordinal='9' />
+                  <column datatype='string' name='SE_ANNO_CA' ordinal='10' />
+                  <column datatype='real' name='SHAPE__Are' ordinal='11' />
+                  <column datatype='real' name='SHAPE__Len' ordinal='12' />
+                  <column datatype='spatial' name='Geometry' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='platforms_complete' id='platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA'>
+            <properties context=''>
+              <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[neighbourhood]' />
+              <expression _.fcp.RelationshipCalculations.false...op='[IF BOROUGH = &quot;Westminster&quot; THEN &quot;City of Westminster&quot; &#10;ELSEIF  BOROUGH = &quot;Kensington &amp; Chelsea&quot; THEN &quot;Kensington and Chelsea&quot;&#10;ELSEIF BOROUGH = &quot;Hammersmith &amp; Fulham&quot; THEN &quot;Hammersmith and Fulham&quot;&#10;ELSE BOROUGH&#10;END]' _.fcp.RelationshipCalculations.true...op='IF [BOROUGH] = &quot;Westminster&quot; THEN &quot;City of Westminster&quot; &#10;ELSEIF  [BOROUGH] = &quot;Kensington &amp; Chelsea&quot; THEN &quot;Kensington and Chelsea&quot;&#10;ELSEIF [BOROUGH] = &quot;Hammersmith &amp; Fulham&quot; THEN &quot;Hammersmith and Fulham&quot;&#10;ELSE [BOROUGH]&#10;END' />
+            </expression>
+            <first-end-point object-id='platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA' />
+            <second-end-point object-id='London_Borough_Boundaries.shp_16B6009B9AF140448E8DBC89408DF288' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='platforms_complete (capstone_jmrs.platforms_complete) (postgres) (5)' inline='true' name='federated.06w5dss19qpefz1enmgrq1uedxvs (copy 4)' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data-analytics-course.c8g8r1deus2v.eu-central-1.rds.amazonaws.com' name='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6 (copy 4)'>
+            <connection authentication='username-password' class='postgres' dbname='postgres' one-time-sql='' port='5432' server='data-analytics-course.c8g8r1deus2v.eu-central-1.rds.amazonaws.com' username='juliarupp' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6 (copy 4)' name='geodata' table='[capstone_jmrs].[geodata]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6 (copy 4)' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
+          <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6 (copy 4)' name='geodata' table='[capstone_jmrs].[geodata]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[available_from]' value='[platforms_complete].[available_from]' />
+          <map key='[available_today]' value='[platforms_complete].[available_today]' />
+          <map key='[bathrooms]' value='[platforms_complete].[bathrooms]' />
+          <map key='[bedrooms]' value='[platforms_complete].[bedrooms]' />
+          <map key='[detailed_furniture]' value='[platforms_complete].[detailed_furniture]' />
+          <map key='[furniture]' value='[platforms_complete].[furniture]' />
+          <map key='[latitude]' value='[geodata].[latitude]' />
+          <map key='[let_type]' value='[platforms_complete].[let_type]' />
+          <map key='[longitude]' value='[geodata].[longitude]' />
+          <map key='[neighbourhood (geodata)]' value='[geodata].[neighbourhood]' />
+          <map key='[neighbourhood]' value='[platforms_complete].[neighbourhood]' />
+          <map key='[platform]' value='[platforms_complete].[platform]' />
+          <map key='[platform_id]' value='[platforms_complete].[platform_id]' />
+          <map key='[price]' value='[platforms_complete].[price]' />
+          <map key='[price_bedroom]' value='[platforms_complete].[price_bedroom]' />
+          <map key='[price_sqm]' value='[platforms_complete].[price_sqm]' />
+          <map key='[property_type]' value='[platforms_complete].[property_type]' />
+          <map key='[scraping_date]' value='[platforms_complete].[scraping_date]' />
+          <map key='[size_sqm]' value='[platforms_complete].[size_sqm]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>platform_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[platform_id]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>platform_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>platform</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[platform]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>platform</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>neighbourhood</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>furniture</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[furniture]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>furniture</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>property_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[property_type]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>property_type</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>size_sqm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[size_sqm]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>size_sqm</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bedrooms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bedrooms]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>bedrooms</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bathrooms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bathrooms]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>bathrooms</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_sqm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_sqm]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>price_sqm</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_bedroom</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_bedroom]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>price_bedroom</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>available_from</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[available_from]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>available_from</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>available_today</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[available_today]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>available_today</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>let_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[let_type]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>let_type</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>detailed_furniture</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[detailed_furniture]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>detailed_furniture</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scraping_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[scraping_date]</local-name>
+            <parent-name>[platforms_complete]</parent-name>
+            <remote-alias>scraping_date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood (geodata)]</local-name>
+            <parent-name>[geodata]</parent-name>
+            <remote-alias>neighbourhood</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geodata (capstone_jmrs.geodata)_9DCB4CAB2536491F99683D1D5D56CCDE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[geodata]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geodata (capstone_jmrs.geodata)_9DCB4CAB2536491F99683D1D5D56CCDE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[geodata]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geodata (capstone_jmrs.geodata)_9DCB4CAB2536491F99683D1D5D56CCDE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Bedrooms Dim' datatype='string' datatype-customized='true' default-role='measure' default-type='ordinal' name='[Bedrooms (copy)_4969722205270302720]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([bedrooms])' />
+        <aliases>
+          <alias key='&quot;0&quot;' value='Studio' />
+        </aliases>
+      </column>
+      <column caption='Bedrooms (copy)' datatype='real' default-format='n#,##0&quot; beds&quot;;-#,##0&quot; beds&quot;' name='[Bedrooms (copy)_60446771588874240]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='[bedrooms]' />
+        <aliases>
+          <alias key='0.0' value='Studio' />
+          <alias key='1.0' value='1 Bedroom' />
+          <alias key='2.0' value='2 Bedroom' />
+          <alias key='3.0' value='3 Bedroom' />
+          <alias key='4.0' value='4 Bedroom' />
+          <alias key='5.0' value='5 Bedroom' />
+          <alias key='6.0' value='6 Bedroom' />
+        </aliases>
+      </column>
+      <column caption='Bedrooms Dim (copy)' datatype='string' datatype-customized='true' default-role='measure' default-type='ordinal' name='[Bedrooms Dim (copy)_60446771591495681]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([bedrooms])' />
+        <aliases>
+          <alias key='&quot;0&quot;' value='Studio' />
+        </aliases>
+      </column>
+      <column caption='Occupancy rate 30 days' datatype='string' name='[Calculation_1015491366504726528]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [available_from] &lt; #2022-11-12# THEN &apos;available&apos;&#10;ELSE &apos;occupied&apos;&#10;END' />
+      </column>
+      <column caption='Occupancy Rate with bedrooms' datatype='string' name='[Calculation_1015491366567194626]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[available_today] + STR([bedrooms])' />
+      </column>
+      <column caption='Targeted Groups KPI 10/11' datatype='string' name='[Calculation_2123095397813891074]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [platform] = &apos;Rightmove&apos; AND [furniture] = &apos;unfurnished&apos; THEN &apos;Rightmove unfurnished&apos;&#10;ELSEIF [platform] = &apos;Blueground&apos; OR [platform] = &apos;Spotahome&apos; THEN &apos;Spotahome &amp; Blueground&apos;&#10;ELSE &apos;Rightmove furnished&apos;&#10;END' />
+      </column>
+      <column caption='Neighbourhood (copy)' datatype='string' name='[Neighbourhood (copy)_224757789261254656]' role='dimension' semantic-role='[NUTS].[Name]' type='nominal'>
+        <calculation class='tableau' formula='[neighbourhood]' />
+      </column>
+      <column datatype='string' name='[Neighbourhood (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[neighbourhood]' new-bin='true'>
+          <bin default-name='false' value='&quot;High Prices&quot;'>
+            <value>&quot;City of London&quot;</value>
+            <value>&quot;City of Westminster&quot;</value>
+            <value>&quot;Kensington and Chelsea&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Low Prices&quot;'>
+            <value>&quot;Hackney&quot;</value>
+            <value>&quot;Lambeth&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Middle Prices&quot;'>
+            <value>&quot;Camden&quot;</value>
+            <value>&quot;Hammersmith and Fulham&quot;</value>
+            <value>&quot;Islington&quot;</value>
+            <value>&quot;Tower Hamlets&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column aggregation='None' datatype='integer' name='[Size Sqm (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='1' formula='[size_sqm]' peg='0' size='91' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='geodata' datatype='table' name='[__tableau_internal_object_id__].[geodata (capstone_jmrs.geodata)_9DCB4CAB2536491F99683D1D5D56CCDE]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='platforms_complete' datatype='table' name='[__tableau_internal_object_id__].[platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA]' role='measure' type='quantitative' />
+      <column caption='Available From' datatype='date' name='[available_from]' role='dimension' type='ordinal' />
+      <column caption='Available Today' datatype='string' name='[available_today]' role='dimension' type='nominal' />
+      <column caption='Bathrooms' datatype='real' name='[bathrooms]' role='measure' type='quantitative' />
+      <column caption='Bedrooms' datatype='real' default-format='n#,##0&quot; beds&quot;;-#,##0&quot; beds&quot;' name='[bedrooms]' role='measure' type='quantitative' />
+      <column caption='Detailed Furniture' datatype='string' name='[detailed_furniture]' role='dimension' type='nominal' />
+      <column caption='Furniture' datatype='string' name='[furniture]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Let Type' datatype='string' name='[let_type]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Neighbourhood (Geodata)' datatype='string' name='[neighbourhood (geodata)]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+      <column caption='Platform' datatype='string' name='[platform]' role='dimension' type='nominal' />
+      <column caption='Platform Id' datatype='string' name='[platform_id]' role='dimension' type='nominal' />
+      <column caption='Price' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price]' role='measure' type='quantitative' />
+      <column caption='Price Bedroom' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price_bedroom]' role='measure' type='quantitative' />
+      <column caption='Price Sqm' datatype='real' default-format='c&quot;£ &quot;#,##0;-&quot;£ &quot;#,##0' name='[price_sqm]' role='measure' type='quantitative' />
+      <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+      <column caption='Scraping Date' datatype='date' name='[scraping_date]' role='dimension' type='ordinal' />
+      <column caption='Size Sqm' datatype='real' default-format='n#,##0&quot; m²&quot;;-#,##0&quot; m²&quot;' name='[size_sqm]' role='measure' type='quantitative' />
+      <column-instance column='[Bedrooms (copy)_4969722205270302720]' derivation='Attribute' name='[attr:Bedrooms (copy)_4969722205270302720:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Bedrooms (copy)_4969722205270302720]' derivation='None' name='[none:Bedrooms (copy)_4969722205270302720:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Neighbourhood (copy)_224757789261254656]' derivation='None' name='[none:Neighbourhood (copy)_224757789261254656:nk]' pivot='key' type='nominal' />
+      <column-instance column='[available_today]' derivation='None' name='[none:available_today:nk]' pivot='key' type='nominal' />
+      <column-instance column='[furniture]' derivation='None' name='[none:furniture:nk]' pivot='key' type='nominal' />
+      <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Neighbourhood (copy)_224757789261254656:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Camden&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Hammersmith and Fulham&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Hackney&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Tower Hamlets&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kensington and Chelsea&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;City of Westminster&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Islington&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;City of London&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Lambeth&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Bedrooms (copy)_4969722205270302720:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>%many-values%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:available_today:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;available&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;occupied&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Bedrooms (copy)_4969722205270302720:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>%null%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:neighbourhood:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Camden&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Hammersmith and Fulham&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Hackney&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Tower Hamlets&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kensington and Chelsea&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;City of Westminster&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Islington&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;City of London&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Lambeth&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:furniture:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;unfurnished&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;furnished&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Neighbourhood (group)]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Low Prices&quot;</bucket>
+            </map>
+            <map to='#a2a2a2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;High Prices&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Middle Prices&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='geodata' id='geodata (capstone_jmrs.geodata)_9DCB4CAB2536491F99683D1D5D56CCDE'>
+            <properties context=''>
+              <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6 (copy 4)' name='geodata' table='[capstone_jmrs].[geodata]' type='table' />
+            </properties>
+          </object>
+          <object caption='platforms_complete' id='platforms_complete (capstone_jmrs.platforms_complete)_451F6132F7534252BB5A4DA4F21277DA'>
+            <properties context=''>
+              <relation connection='postgres.1ji6jh50bfjdah1aefx9v1qvrhs6 (copy 4)' name='platforms_complete' table='[capstone_jmrs].[platforms_complete]' type='table' />
             </properties>
           </object>
         </objects>
@@ -9133,8 +9731,8 @@
           </layout-options>
           <size maxheight='800' minheight='800' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='121' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98692' id='120' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+            <zone h='100000' id='125' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98692' id='124' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
                 <zone h='2942' id='35' type-v2='title' w='99294' x='353' y='654'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9215,54 +9813,48 @@
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98692' id='44' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-            <zone h='98692' id='41' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-              <zone h='98692' id='30' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                <zone h='98692' id='23' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                  <zone h='98692' id='19' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
-                    <zone h='2942' id='20' type-v2='title' w='99294' x='353' y='654'>
-                      <zone-style>
-                        <format attr='border-color' value='#000000' />
-                        <format attr='border-style' value='none' />
-                        <format attr='border-width' value='0' />
-                        <format attr='margin' value='4' />
-                      </zone-style>
-                    </zone>
-                    <zone h='95750' id='5' param='horz' type-v2='layout-flow' w='99294' x='353' y='3596'>
-                      <zone h='95750' id='3' type-v2='layout-basic' w='99294' x='353' y='3596'>
-                        <zone h='47874' id='50' name='What is Blueground offering?' w='49646' x='353' y='3596'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                        <zone h='47874' id='53' name='GEO Blueground' w='49648' x='49999' y='3596'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                        <zone h='47876' id='54' name='GEO Blueground prices' w='49646' x='353' y='51470'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                        <zone h='47876' id='57' name='GEO Blueground prices sqm' w='49648' x='49999' y='51470'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                      </zone>
-                    </zone>
+            <zone h='98692' id='19' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+              <zone h='2942' id='20' type-v2='title' w='99294' x='353' y='654'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='95750' id='5' param='horz' type-v2='layout-flow' w='99294' x='353' y='3596'>
+                <zone h='95750' id='3' type-v2='layout-basic' w='99294' x='353' y='3596'>
+                  <zone h='47874' id='50' name='What is Blueground offering?' w='49646' x='353' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47874' id='53' name='GEO Blueground' w='49648' x='49999' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47876' id='54' name='GEO Blueground prices' w='49646' x='353' y='51470'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47876' id='57' name='GEO Blueground prices sqm' w='49648' x='49999' y='51470'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
                   </zone>
                 </zone>
               </zone>
@@ -9300,58 +9892,48 @@
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98692' id='84' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-            <zone h='98692' id='81' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-              <zone h='98692' id='79' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                <zone h='98692' id='77' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                  <zone h='98692' id='73' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                    <zone h='98692' id='67' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                      <zone h='98692' id='16' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
-                        <zone h='2942' id='17' type-v2='title' w='99294' x='353' y='654'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                        <zone h='95750' id='7' param='horz' type-v2='layout-flow' w='99294' x='353' y='3596'>
-                          <zone h='95750' id='5' type-v2='layout-basic' w='99294' x='353' y='3596'>
-                            <zone h='47872' id='3' name='1-overall size unfurnished' w='49646' x='353' y='3596'>
-                              <zone-style>
-                                <format attr='border-color' value='#000000' />
-                                <format attr='border-style' value='none' />
-                                <format attr='border-width' value='0' />
-                                <format attr='margin' value='4' />
-                              </zone-style>
-                            </zone>
-                            <zone h='47867' id='64' name='1-GEO Available unfurnished Apartments, on Rightmove, for Prices &lt; £8.000' w='49648' x='49999' y='3596'>
-                              <zone-style>
-                                <format attr='border-color' value='#000000' />
-                                <format attr='border-style' value='none' />
-                                <format attr='border-width' value='0' />
-                                <format attr='margin' value='4' />
-                              </zone-style>
-                            </zone>
-                            <zone h='47883' id='71' name='1-What are the price ranges for SQM?' w='49648' x='49999' y='51463'>
-                              <zone-style>
-                                <format attr='border-color' value='#000000' />
-                                <format attr='border-style' value='none' />
-                                <format attr='border-width' value='0' />
-                                <format attr='margin' value='4' />
-                              </zone-style>
-                            </zone>
-                            <zone h='47878' id='82' name='1-overall size unfurnished per bedroom' w='49646' x='353' y='51468'>
-                              <zone-style>
-                                <format attr='border-color' value='#000000' />
-                                <format attr='border-style' value='none' />
-                                <format attr='border-width' value='0' />
-                                <format attr='margin' value='4' />
-                              </zone-style>
-                            </zone>
-                          </zone>
-                        </zone>
-                      </zone>
-                    </zone>
+            <zone h='98692' id='16' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+              <zone h='2942' id='17' type-v2='title' w='99294' x='353' y='654'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='95750' id='7' param='horz' type-v2='layout-flow' w='99294' x='353' y='3596'>
+                <zone h='95750' id='5' type-v2='layout-basic' w='99294' x='353' y='3596'>
+                  <zone h='47872' id='3' name='1-overall size unfurnished' w='49646' x='353' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47867' id='64' name='1-GEO Available unfurnished Apartments, on Rightmove, for Prices &lt; £8.000' w='49648' x='49999' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47883' id='71' name='1-What are the price ranges for SQM?' w='49648' x='49999' y='51463'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47878' id='82' name='1-overall size unfurnished per bedroom' w='49646' x='353' y='51468'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
                   </zone>
                 </zone>
               </zone>
@@ -9386,8 +9968,8 @@
           </layout-options>
           <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='104' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98692' id='103' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+            <zone h='100000' id='108' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='107' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='2942' id='17' type-v2='title' w='99294' x='353' y='654'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9548,8 +10130,8 @@
           </layout-options>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='112' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98692' id='111' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+            <zone h='100000' id='116' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='115' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='2942' id='35' type-v2='title' w='99294' x='353' y='654'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9690,8 +10272,8 @@
           </layout-options>
           <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='97' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98866' id='96' param='vert' type-v2='layout-flow' w='99368' x='316' y='567'>
+            <zone h='100000' id='101' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='100' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='2553' id='35' type-v2='title' w='99368' x='316' y='567'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9863,8 +10445,8 @@
           </layout-options>
           <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='111' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98692' id='110' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+            <zone h='100000' id='115' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='114' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='2942' id='35' type-v2='title' w='99294' x='353' y='654'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -9994,8 +10576,8 @@
           </layout-options>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='35' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98692' id='34' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+            <zone h='100000' id='39' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='38' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='2942' id='13' type-v2='title' w='99294' x='353' y='654'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -10056,50 +10638,48 @@
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98692' id='26' param='horz' type-v2='layout-flow' w='92259' x='353' y='654'>
-            <zone h='98692' id='23' param='horz' type-v2='layout-flow' w='92259' x='353' y='654'>
-              <zone h='98692' id='19' param='vert' type-v2='layout-flow' w='92259' x='353' y='654'>
-                <zone h='2942' id='20' type-v2='title' w='92259' x='353' y='654'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                  </zone-style>
-                </zone>
-                <zone h='95750' id='5' param='horz' type-v2='layout-flow' w='92259' x='353' y='3596'>
-                  <zone h='95750' id='3' type-v2='layout-basic' w='92259' x='353' y='3596'>
-                    <zone h='47874' id='1' name='3-funished Average price, price_sqm, price_bedroom' w='46128' x='353' y='3596'>
-                      <zone-style>
-                        <format attr='border-color' value='#000000' />
-                        <format attr='border-style' value='none' />
-                        <format attr='border-width' value='0' />
-                        <format attr='margin' value='4' />
-                      </zone-style>
-                    </zone>
-                    <zone h='47874' id='9' name='4-furnished bedrooms count' w='46131' x='46481' y='3596'>
-                      <zone-style>
-                        <format attr='border-color' value='#000000' />
-                        <format attr='border-style' value='none' />
-                        <format attr='border-width' value='0' />
-                        <format attr='margin' value='4' />
-                      </zone-style>
-                    </zone>
-                    <zone h='47876' id='24' name='4-furnished bedrooms precentage' w='46131' x='46481' y='51470'>
-                      <zone-style>
-                        <format attr='border-color' value='#000000' />
-                        <format attr='border-style' value='none' />
-                        <format attr='border-width' value='0' />
-                        <format attr='margin' value='4' />
-                      </zone-style>
-                    </zone>
-                    <zone h='47876' id='30' name='5-furnished apartment size' w='46128' x='353' y='51470'>
-                      <zone-style>
-                        <format attr='border-color' value='#000000' />
-                        <format attr='border-style' value='none' />
-                        <format attr='border-width' value='0' />
-                        <format attr='margin' value='4' />
-                      </zone-style>
-                    </zone>
+            <zone h='98692' id='19' param='vert' type-v2='layout-flow' w='92259' x='353' y='654'>
+              <zone h='2942' id='20' type-v2='title' w='92259' x='353' y='654'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='95750' id='5' param='horz' type-v2='layout-flow' w='92259' x='353' y='3596'>
+                <zone h='95750' id='3' type-v2='layout-basic' w='92259' x='353' y='3596'>
+                  <zone h='47874' id='1' name='3-funished Average price, price_sqm, price_bedroom' w='46128' x='353' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47874' id='9' name='4-furnished bedrooms count' w='46131' x='46481' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47876' id='24' name='4-furnished bedrooms precentage' w='46131' x='46481' y='51470'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47876' id='30' name='5-furnished apartment size' w='46128' x='353' y='51470'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
                   </zone>
                 </zone>
               </zone>
@@ -10139,48 +10719,42 @@
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98692' id='44' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-            <zone h='98692' id='41' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-              <zone h='98692' id='30' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                <zone h='98692' id='23' param='horz' type-v2='layout-flow' w='99294' x='353' y='654'>
-                  <zone h='98692' id='19' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
-                    <zone h='2942' id='20' type-v2='title' w='99294' x='353' y='654'>
-                      <zone-style>
-                        <format attr='border-color' value='#000000' />
-                        <format attr='border-style' value='none' />
-                        <format attr='border-width' value='0' />
-                        <format attr='margin' value='4' />
-                      </zone-style>
-                    </zone>
-                    <zone h='95750' id='5' param='horz' type-v2='layout-flow' w='99294' x='353' y='3596'>
-                      <zone h='95750' id='3' type-v2='layout-basic' w='99294' x='353' y='3596'>
-                        <zone h='47874' id='35' name='6-funished occupancy rate today' w='49649' x='49998' y='3596'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                        <zone h='47876' id='39' name='6-funished occupancy rate 30 days' w='49649' x='49998' y='51470'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                        <zone h='47874' id='42' name='6-funished occupancy rate 100% beds' w='49645' x='353' y='3596'>
-                          <zone-style>
-                            <format attr='border-color' value='#000000' />
-                            <format attr='border-style' value='none' />
-                            <format attr='border-width' value='0' />
-                            <format attr='margin' value='4' />
-                          </zone-style>
-                        </zone>
-                        <zone h='47876' id='49' param='horz' type-v2='layout-flow' w='49645' x='353' y='51470' />
-                      </zone>
-                    </zone>
+            <zone h='98692' id='19' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+              <zone h='2942' id='20' type-v2='title' w='99294' x='353' y='654'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='95750' id='5' param='horz' type-v2='layout-flow' w='99294' x='353' y='3596'>
+                <zone h='95750' id='3' type-v2='layout-basic' w='99294' x='353' y='3596'>
+                  <zone h='47874' id='35' name='6-funished occupancy rate today' w='49649' x='49998' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
                   </zone>
+                  <zone h='47876' id='39' name='6-funished occupancy rate 30 days' w='49649' x='49998' y='51470'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47874' id='42' name='6-funished occupancy rate 100% beds' w='49645' x='353' y='3596'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47876' id='49' param='horz' type-v2='layout-flow' w='49645' x='353' y='51470' />
                 </zone>
               </zone>
             </zone>
@@ -10303,8 +10877,8 @@
           </layout-options>
           <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='92' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98692' id='91' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+            <zone h='100000' id='96' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='95' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='2942' id='21' type-v2='title' w='92239' x='353' y='654'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -10537,8 +11111,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='850' minheight='850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='81' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98692' id='80' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
+            <zone h='100000' id='85' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98692' id='84' param='vert' type-v2='layout-flow' w='99294' x='353' y='654'>
                 <zone forceUpdate='true' h='11029' id='5' type-v2='text' w='11464' x='2072' y='1471'>
                   <formatted-text>
                     <run fontname='Trebuchet MS' fontsize='20'>KPI overview</run>
@@ -10767,7 +11341,7 @@
       <simple-id uuid='{CF86378A-48E9-4437-9B14-8932FF941DE4}' />
     </dashboard>
   </dashboards>
-  <windows source-height='156'>
+  <windows source-height='177'>
     <window class='worksheet' name='0-Offers Total count'>
       <cards>
         <edge name='left'>
@@ -12118,7 +12692,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='94' />
+      <active id='-1' />
       <simple-id uuid='{DC13106A-33F6-42DF-B3AF-0E169AD92F4E}' />
     </window>
     <window class='dashboard' name='Dashboard KPI 2'>
@@ -12127,7 +12701,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='13' />
+      <active id='-1' />
       <simple-id uuid='{EC368329-DC35-402E-88F4-3C53A8FC8A95}' />
     </window>
     <window class='dashboard' name='Dashboard KPI 3-5 Furnished'>
@@ -12225,7 +12799,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='82' />
+      <active id='-1' />
       <simple-id uuid='{CA1B0B00-12E3-408D-8490-EA9E8F082150}' />
     </window>
     <window class='dashboard' name='Dashboard KPI 10+11 Comparison Rental Prices bedrooms'>
@@ -12240,7 +12814,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='87' />
+      <active id='-1' />
       <simple-id uuid='{0E90568C-2C20-4E4F-A8A1-6BFCF71182A8}' />
     </window>
     <window class='dashboard' name='Dashboard KPI 10+11 Comparison of different types of prices'>
@@ -12255,7 +12829,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='101' />
+      <active id='-1' />
       <simple-id uuid='{89DABE0D-CAE6-469C-BF31-B801DCC83274}' />
     </window>
     <window class='dashboard' name='Dashboard KPI 10+11 Comparison Rental Prices'>
@@ -12264,7 +12838,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='102' />
+      <active id='-1' />
       <simple-id uuid='{82E7A38A-A5F0-4063-9ACA-6644A7D1D984}' />
     </window>
     <window class='dashboard' name='Dashboard Differnce Prices'>
