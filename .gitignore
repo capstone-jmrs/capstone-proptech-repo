@@ -138,6 +138,13 @@ data/
 /data/
 data
 
+# Garbage
+Garbage
+garbage
+garbage/
+/garbage/
+
+
 __MACOSX/
 .DS_Store
 
