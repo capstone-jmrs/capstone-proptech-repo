@@ -46,4 +46,4 @@ Every platform works different so the goal was to have one notebook for each pla
 - Rightmove: rightmove.ipynb
 
 After that the tables are combined and provided for the visualization with tableau.
-- platforms_complete.twb
+- platforms_complete.twbx
